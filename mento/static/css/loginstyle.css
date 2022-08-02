@@ -1,0 +1,77 @@
+html, body{
+    height : 100%;
+    margin : 0;
+    font-size : 20px;
+}
+
+body{
+    display : flex;
+    justify-content : center;
+}
+.login-form{
+    display : flex;
+    flex-direction : column;
+    padding : 1rem;
+    margin-top : 12rem;
+    border-radius : 1rem;
+    width : 24rem;
+    margin-bottom : 6.5rem;
+    justify-content : center;
+}
+.login-form form {
+    padding: 0 2rem;
+}
+
+.int-area input {
+    width: 100%;
+    height: 1rem;
+    font-size: .7rem;
+    padding: .5rem 0;
+    border: 0;
+    border-bottom: 1px solid rgb(132, 132, 132);
+    background: transparent;
+    color: rgb(78, 78, 78);
+    outline: 0;
+}
+
+.int-area:first-child input {
+    margin-bottom: 1.5rem;
+}
+
+.btn-area {
+    text-align: center;
+    padding:0.8rem
+}
+
+.btn-area input#btn {
+    width: 80%;
+    padding: .6rem 0;
+    background: rgb(135,172,251);
+    color: rgb(247, 247, 247);
+    border: none;
+    cursor: pointer;
+    font-size: .9rem;
+}
+.btn-area input#btn:hover {
+    background: rgb(109,155,255);
+    color: rgb(230, 230, 230);
+}
+a.btn-area{
+    text-align: center;
+    padding: 0.8rem;
+
+}
+#btn2 {
+    width: 80%;
+    padding: .6rem 0;
+    background: rgb(135, 172, 251);
+    color: rgb(247, 247, 247);
+    border: none;
+    cursor: pointer;
+    font-size: .9rem;
+}
+
+#btn2:hover {
+    background: rgb(109, 155, 255);
+    color: rgb(230, 230, 230);
+}

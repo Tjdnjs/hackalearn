@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/css/loginstyle.css">
     <title>Document</title>
   </head>
 
@@ -10,16 +11,17 @@
     {% if login == True %}
 
     <h3>{{username}}님 반갑습니다 !</h3>
-    <a href="/logout">LOGOUT</a>
+    <a id="btn2" href="/logout"><div class="btn-area">LOGOUT</div></a>
 
     {%else%}
-
-    <form action="/signin" method="get">
-      <p>Enter Name:</p>
-      <p><input type="text" placeholder="id" name="id" /></p>
-      <p><input type="password" placeholder="password" name="pw" /></p>
-      <p><input type="submit" value="submit" /></p>
-    </form>
+    <section class="login-form">
+      <form action="/signin" method="get">
+        <p>Enter Name:</p>
+        <div class="int-area"><input type="text" placeholder="id" name="id" /></div>
+        <div class="int-area"><input type="password" placeholder="password" name="pw" /></div>
+        <div class="btn-area"><input type="submit" id="btn" value="submit" /></div>
+      </form>
+    </section>
 
     {%endif%}
   </body>
