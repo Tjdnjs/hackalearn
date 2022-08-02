@@ -4,8 +4,27 @@ section, #table, .column{
 section{
     flex-direction: column;
     width: 100%;
-    margin-top: 9rem;
+    margin-top: 5rem;
     align-items: center;
+}
+
+button{
+    width : 80%;
+    height: 30px;
+    margin-bottom:.6rem;
+    background-color:rgb(130, 111, 255);
+    border:none;
+    border-radius:5px;
+}
+button:hover{
+    background-color:rgb(82, 55, 255);
+    text-decoration: none;
+
+}
+
+button a{
+    text-decoration:none;
+    color:white;
 }
 
 #table{
@@ -14,8 +33,9 @@ section{
 
 .column{
     width: 100%;
-    border: 1px solid gray;
+    border: 1px solid rgb(186,176,255);
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+

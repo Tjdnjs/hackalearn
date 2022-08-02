@@ -41,14 +41,15 @@ body{
 .btn-area input#btn , .btn-area button{
     width: 20rem;
     padding: .6rem 0;
-    background: rgb(135,172,251);
+    background: rgb(130,111,255);
     color: rgb(247, 247, 247);
     border: none;
+    border-radius: 20px;
     cursor: pointer;
     font-size: .9rem;
 }
 .btn-area input#btn:hover{
-    background: rgb(109,155,255);
+    background: rgb(82,55,255);
     color: rgb(230, 230, 230);
 }
 
