@@ -1,4 +1,4 @@
-# hackalearn - maracom 💥
+# 💥hackalearn - maracom💥
 
 ## 1주차 (7/28 ~ 8/2)
 
