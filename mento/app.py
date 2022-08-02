@@ -34,9 +34,6 @@ def logout():
     session.pop("id")
     return redirect(url_for("login"))
 
-if __name__ == '__main__':
-    app.run(host="0.0.0.0", port="8080")
-
 @app.route('/question')
 def question():
     return render_template('question.html')
@@ -52,3 +49,8 @@ def user():
 @app.route('/write')
 def write():
     return render_template('write.html')
+
+
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port="8080")

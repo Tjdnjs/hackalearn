@@ -20,10 +20,32 @@
         <a href="/">HOME</a>
         <a href="/question">QUESTION</a>
         <a href="/answer">ANSWER</a>
-        <a href="/user">USER</a>
+        <a href="#" id = "us">USER</a>
         <a href="/login">LOGIN</a>
       </div>
     </header>
+
+    {% if login == False %}
+
+    <div class="usermenu">
+      <li id="guide">Please Login</li>
+      <ul id="usermenu">
+              <li><a href="login.html" id="prof1">Sign in</a></li>
+              <li><a href="/login">Login</a></li>
+      </ul>
+    </div>
+
+    {%else%}
+
+    <div class="usermenu">
+      <li id="guide">{{username}}님</li>
+      <ul id="usermenu">
+              <li><a href="/user" id="prof1">Usermenu</a></li>
+              <li><a href="/logout">Logout</a></li>
+      </ul>
+    </div>
+
+    {%endif%}
 
     <section class="login-form">
 
@@ -45,6 +67,6 @@
 
     </section>
 
-
+    <script src="../static/js/toggle.js"></script>
   </body>
 </html>

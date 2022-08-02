@@ -25,6 +25,8 @@ button:hover{
 button a{
     text-decoration:none;
     color:white;
+    font-size: .75rem;
+    padding: .4rem 25%;
 }
 
 #table{
