@@ -4,25 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="static/css/loginstyle.css">
+    <link rel="stylesheet" href="../static/css/header.css">
     <title>Document</title>
   </head>
 
   <body>
-    {% if login == True %}
 
-    <h3>{{username}}님 반갑습니다 !</h3>
-    <a id="btn2" href="/logout"><div class="btn-area">LOGOUT</div></a>
+    <header>
+      <h1 id="title">TITLE</h1>
+      <div id="menu" method = "get">
+        <a href="/">HOME</a>
+        <a href="/question">QUESTION</a>
+        <a href="/answer">ANSWER</a>
+        <a href="/user">USER</a>
+        <a href="/login">LOGIN</a>
+      </div>
+    </header>
 
-    {%else%}
     <section class="login-form">
+
+      {% if login == True %}
+
+      <h3>{{username}}님 반갑습니다 !</h3>
+      <div class="btn-area"><button id="btn2"><a href="/logout">LOGOUT</a></button></div>
+      
+      {%else%}
+
       <form action="/signin" method="get">
-        <p>Enter Name:</p>
+        <p>LOGIN</p>
         <div class="int-area"><input type="text" placeholder="id" name="id" /></div>
         <div class="int-area"><input type="password" placeholder="password" name="pw" /></div>
-        <div class="btn-area"><input type="submit" id="btn" value="submit" /></div>
+        <div class="btn-area"><input type="submit" id="btn" value="login" /></div>
       </form>
+
+      {%endif%}
+
     </section>
 
-    {%endif%}
+
   </body>
 </html>

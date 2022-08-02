@@ -1,51 +1,37 @@
-#title{
-  text-align: center;
-  padding: 10px;
-  border-bottom: 1px solid gray;
+#question, #answer{
+  width: 22rem;
 }
-#menu{
-  text-align: center;
-  border-bottom: 1px solid gray;
-}
-#menu a{
-  color: gray;
-  text-decoration: none;
-  margin: 10px;
-}
-#question h1,h3{
-  width: 400px;
-}
+
 #question{
   display: inline-block;
   text-align: center;
-  padding-bottom: 20px;
-  margin: 10px;
+  padding-bottom: 1rem;
+  margin: .5rem;
   border: 1px solid rgb(109, 155, 255);
   background-color: rgb(135, 172, 251);
 }
-#answer h1,h3{
-  width: 400px;
-}
+
 #answer{
   display: inline-block;
   text-align: center;
-  margin: 10px;
-  padding-bottom: 20px;
+  margin: .5rem;
+  padding-bottom: 1rem;
   border: 1px solid rgb(109, 155, 255);
   background-color: rgb(135, 172, 251);
 }
 #qna{
   color: rgb(27, 77, 142);
-  margin-top: 150px;
+  margin-top: 7.5rem;
   display: block;
   text-align: center;
 }
+
 #qna button{
   color: rgb(27, 77, 142);
 }
 #explain{
-  font-size: 25px;
-  margin-top: 60px;
+  font-size: 1.25rem;
+  margin-top: 3rem;
   text-align: center;
   color: rgb(69, 69, 69);
 }

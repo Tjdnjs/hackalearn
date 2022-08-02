@@ -5,25 +5,20 @@ html, body{
 }
 
 body{
-    display : flex;
-    justify-content : center;
+    text-align: center;
 }
+
 .login-form{
     display : flex;
     flex-direction : column;
-    padding : 1rem;
-    margin-top : 12rem;
     border-radius : 1rem;
-    width : 24rem;
-    margin-bottom : 6.5rem;
+    margin-top: 9rem;
+    width : 100%;
     justify-content : center;
-}
-.login-form form {
-    padding: 0 2rem;
 }
 
 .int-area input {
-    width: 100%;
+    width: 20rem;
     height: 1rem;
     font-size: .7rem;
     padding: .5rem 0;
@@ -40,11 +35,11 @@ body{
 
 .btn-area {
     text-align: center;
-    padding:0.8rem
+    padding-top:1rem
 }
 
-.btn-area input#btn {
-    width: 80%;
+.btn-area input#btn , .btn-area button{
+    width: 20rem;
     padding: .6rem 0;
     background: rgb(135,172,251);
     color: rgb(247, 247, 247);
@@ -52,26 +47,21 @@ body{
     cursor: pointer;
     font-size: .9rem;
 }
-.btn-area input#btn:hover {
+.btn-area input#btn:hover{
     background: rgb(109,155,255);
     color: rgb(230, 230, 230);
 }
-a.btn-area{
-    text-align: center;
-    padding: 0.8rem;
 
-}
-#btn2 {
-    width: 80%;
-    padding: .6rem 0;
-    background: rgb(135, 172, 251);
-    color: rgb(247, 247, 247);
-    border: none;
-    cursor: pointer;
-    font-size: .9rem;
-}
-
-#btn2:hover {
-    background: rgb(109, 155, 255);
+.btn-area button#btn2:hover{
+    background: rgb(109,155,255);
     color: rgb(230, 230, 230);
+}
+
+.btn-area button#btn2 a,
+.btn-area button#btn2 a:hover,
+.btn-area button#btn2 a:visited
+{
+    text-decoration: none;
+    padding: .6rem 40%;
+    color: rgb(247, 247, 247);
 }

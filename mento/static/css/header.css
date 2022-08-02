@@ -1,0 +1,25 @@
+html, body{
+    height : 100%;
+    margin : 0;
+    font-size : 20px;
+}
+
+header{
+    height: 5rem;
+}
+
+#title{
+  text-align: center;
+  padding: .5rem;
+  border-bottom: 1px solid gray;
+  margin: 0;
+}
+#menu{
+  text-align: center;
+  border-bottom: 1px solid gray;
+}
+#menu a{
+  color: gray;
+  text-decoration: none;
+  margin: .5rem;
+}
