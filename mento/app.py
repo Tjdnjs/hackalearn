@@ -48,3 +48,7 @@ def answer():
 @app.route('/user')
 def user():
     return render_template('user.html')
+
+@app.route('/write')
+def write():
+    return render_template('write.html')
