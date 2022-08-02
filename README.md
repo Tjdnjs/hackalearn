@@ -13,5 +13,5 @@
 
 |Stack|Status|
 |:---|:---|
-|Front|index.html, login.html, question.html, 헤더 틀 제작|
-|Back|페이지 routing / login, logout 기능 구현|
+|Front|index.html, login.html, question.html, header 틀 제작|
+|Back|페이지 routing / login, logout 기능 구현 <br>데이터베이스 구조 기획|
