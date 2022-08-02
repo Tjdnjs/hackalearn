@@ -36,3 +36,15 @@ def logout():
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port="8080")
+
+@app.route('/question')
+def question():
+    return render_template('question.html')
+
+@app.route('/answer')
+def answer():
+    return render_template('answer.html')
+
+@app.route('/user')
+def user():
+    return render_template('user.html')
