@@ -1,10 +1,17 @@
 from flask import Flask, request, render_template, session, redirect, url_for
+import pymysql
 
 app = Flask(__name__)
 app.secret_key = "hackalearn2022"
 
+
+db = pymysql.connect(host='localhost', port=3306, user='root', passwd='qkrtjdnjsdb1!', db='tag', charset='utf8')
+
+tag = db.cursor()
+
 ID = "admin"
 PW = "1"
+
 
 @app.route('/')
 def index():
@@ -36,7 +43,10 @@ def logout():
 
 @app.route('/question')
 def question():
-    return render_template('question.html')
+    sql = "select * from tag1"
+    tag.execute(sql)
+    result = tag.fetchall()
+    return render_template('question.html', tag=result)
 
 @app.route('/answer')
 def answer():
