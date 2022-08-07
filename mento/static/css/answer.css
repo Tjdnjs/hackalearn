@@ -1,3 +1,8 @@
+ol{
+    position: absolute;
+    left: 30%;
+}
+
 .menubar {
     opacity: .85;
     position: relative;

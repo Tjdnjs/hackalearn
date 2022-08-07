@@ -65,18 +65,15 @@ def write():
 
 @app.route('/post', methods = ["get", "post"])
 def post():
-    if request.method == "GET":
-        return render_template("img_viewer.html")
-    elif request.method == "POST":
-        id = ID
-        tag = str(request.args.get('tag'))
-        title = str(request.args.get('title'))
-        content = str(request.args.get('content'))
-        db = pymysql.connect(host='localhost', port=3306, user='root', passwd='qkrtjdnjsdb1!', db='hackalearn', charset='utf8')
-        article = db.cursor()
-        article.execute("INSERT INTO articles VALUES(%s, %s, %s, %s, %s)", [None, id, title, content, tag])
-        db.commit();
-        return redirect(url_for('answer'))
+    id = ID
+    tag = str(request.args.get('tag'))
+    title = str(request.args.get('title'))
+    content = str(request.args.get('content'))
+    db = pymysql.connect(host='localhost', port=3306, user='root', passwd='qkrtjdnjsdb1!', db='hackalearn', charset='utf8')
+    article = db.cursor()
+    article.execute("INSERT INTO articles VALUES(%s, %s, %s, %s, %s)", [None, id, title, content, tag])
+    db.commit();
+    return redirect(url_for('answer'))
     
 @app.route('/detail/<int:post>')
 def detail(post):
