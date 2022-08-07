@@ -4,10 +4,8 @@ import pymysql
 app = Flask(__name__)
 app.secret_key = "hackalearn2022"
 
-
 ID = "admin"
 PW = "1"
-
 
 @app.route('/')
 def index():
