@@ -49,10 +49,7 @@ def question():
 def answer():
     db = pymysql.connect(host='localhost', port=3306, user='root', passwd='qkrtjdnjsdb1!', db='hackalearn', charset='utf8')
     article = db.cursor()
-    sql = """
-        select * from articles
-    """
-    article.execute(sql)
+    article.execute("select * from articles")
     articles = article.fetchall()
     articles = list(articles)
     db.close()
@@ -66,33 +63,34 @@ def user():
 def write():
     return render_template('write.html')
 
-@app.route('/post', methods = ["get"])
+@app.route('/post', methods = ["get", "post"])
 def post():
-
-    id = ID
-    tag = str(request.args.get('tag'))
-    title = str(request.args.get('title'))
-    content = str(request.args.get('content'))
-
-    db = pymysql.connect(host='localhost', port=3306, user='root', passwd='qkrtjdnjsdb1!', db='hackalearn', charset='utf8')
-    article = db.cursor()
-    article.execute("INSERT INTO articles VALUES(%d, %s, %s, %s, %s)", [None, id, title, content, tag])
-    db.commit();
-    article.execute("select * from articles where content = %s" [content])
-    key = article[-1]
-    return redirect(url_for('detail'), idx=key[0])
+    if request.method == "GET":
+        return render_template("img_viewer.html")
+    elif request.method == "POST":
+        id = ID
+        tag = str(request.args.get('tag'))
+        title = str(request.args.get('title'))
+        content = str(request.args.get('content'))
+        db = pymysql.connect(host='localhost', port=3306, user='root', passwd='qkrtjdnjsdb1!', db='hackalearn', charset='utf8')
+        article = db.cursor()
+        article.execute("INSERT INTO articles VALUES(%s, %s, %s, %s, %s)", [None, id, title, content, tag])
+        db.commit();
+        return redirect(url_for('answer'))
     
-@app.route('/detail', methods = ["get"])
-def detail():
-    idx = request.args.get('idx')
+@app.route('/detail/<int:post>')
+def detail(post):
+    idx = int(post)
     db = pymysql.connect(host='localhost', port=3306, user='root', passwd='qkrtjdnjsdb1!', db='hackalearn', charset='utf8')
     article = db.cursor()
-    article.execute("select * from articles where MYKEY = %d" [idx])
+    sql="select * from articles where MYKEY = %d" %(idx)
+    article.execute(sql)
     result = article.fetchall()
-    id = result[1]
-    tag = result[4]
-    title = result[2]
-    content = result[3]
+    # print(result)
+    id = result[0][1]
+    tag = result[0][4]
+    title = result[0][2]
+    content = result[0][3]
     db.close()
     return render_template('detail.html', id=id, tag=tag, title=title, content=content)
 
