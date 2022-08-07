@@ -5,10 +5,6 @@ app = Flask(__name__)
 app.secret_key = "hackalearn2022"
 
 
-db = pymysql.connect(host='localhost', port=3306, user='root', passwd='qkrtjdnjsdb1!', db='tag', charset='utf8')
-
-tag = db.cursor()
-
 ID = "admin"
 PW = "1"
 
@@ -43,9 +39,12 @@ def logout():
 
 @app.route('/question')
 def question():
+    db = pymysql.connect(host='localhost', port=3306, user='root', passwd='qkrtjdnjsdb1!', db='tag', charset='utf8')
+    tag = db.cursor()
     sql = "select * from tag1"
     tag.execute(sql)
     result = tag.fetchall()
+    db.close()
     return render_template('question.html', tag=result)
 
 @app.route('/answer')
