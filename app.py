@@ -37,7 +37,7 @@ def logout():
 
 @app.route('/question')
 def question():
-    db = pymysql.connect(host='localhost', port=3306, user='root', passwd='qkrtjdnjsdb1!', db='hackalearn', charset='utf8')
+    db = pymysql.connect(host='us-cdbr-east-06.cleardb.net', port=3306, user='bbc263342cae56', passwd='33c946ea', db='heroku_0a4b1cb2682c753', charset='utf8')
     tag = db.cursor()
     sql = "select * from tag"
     tag.execute(sql)
@@ -47,7 +47,7 @@ def question():
 
 @app.route('/answer')
 def answer():
-    db = pymysql.connect(host='localhost', port=3306, user='root', passwd='qkrtjdnjsdb1!', db='hackalearn', charset='utf8')
+    db = pymysql.connect(host='us-cdbr-east-06.cleardb.net', port=3306, user='bbc263342cae56', passwd='33c946ea', db='hackalearn', charset='utf8')
     article = db.cursor()
     article.execute("select * from articles")
     articles = article.fetchall()
@@ -69,7 +69,7 @@ def post():
     tag = str(request.args.get('tag'))
     title = str(request.args.get('title'))
     content = str(request.args.get('content'))
-    db = pymysql.connect(host='localhost', port=3306, user='root', passwd='qkrtjdnjsdb1!', db='hackalearn', charset='utf8')
+    db = pymysql.connect(host='us-cdbr-east-06.cleardb.net', port=3306, user='bbc263342cae56', passwd='33c946ea', db='hackalearn', charset='utf8')
     article = db.cursor()
     article.execute("INSERT INTO articles VALUES(%s, %s, %s, %s, %s)", [None, id, title, content, tag])
     db.commit();
@@ -78,7 +78,7 @@ def post():
 @app.route('/detail/<int:post>')
 def detail(post):
     idx = int(post)
-    db = pymysql.connect(host='localhost', port=3306, user='root', passwd='qkrtjdnjsdb1!', db='hackalearn', charset='utf8')
+    db = pymysql.connect(host='us-cdbr-east-06.cleardb.net', port=3306, user='bbc263342cae56', passwd='33c946ea', db='hackalearn', charset='utf8')
     article = db.cursor()
     sql="select * from articles where MYKEY = %d" %(idx)
     article.execute(sql)
