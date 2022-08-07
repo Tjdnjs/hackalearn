@@ -76,15 +76,25 @@ def post():
 
     db = pymysql.connect(host='localhost', port=3306, user='root', passwd='qkrtjdnjsdb1!', db='hackalearn', charset='utf8')
     article = db.cursor()
-
-    sql = """
-        INSERT INTO articles VALUES(null, id, title, content, tag)
-    """;
-    article.execute(sql)
-    db.commit(); db.close()
-    return redirect(url_for('answer'))
+    article.execute("INSERT INTO articles VALUES(%d, %s, %s, %s, %s)", [None, id, title, content, tag])
+    db.commit();
+    article.execute("select * from articles where content = %s" [content])
+    key = article[-1]
+    return redirect(url_for('detail'), idx=key[0])
     
-
+@app.route('/detail', methods = ["get"])
+def detail():
+    idx = request.args.get('idx')
+    db = pymysql.connect(host='localhost', port=3306, user='root', passwd='qkrtjdnjsdb1!', db='hackalearn', charset='utf8')
+    article = db.cursor()
+    article.execute("select * from articles where MYKEY = %d" [idx])
+    result = article.fetchall()
+    id = result[1]
+    tag = result[4]
+    title = result[2]
+    content = result[3]
+    db.close()
+    return render_template('detail.html', id=id, tag=tag, title=title, content=content)
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port="8080")
