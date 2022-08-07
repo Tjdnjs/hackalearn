@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="../static/css/answer.css">
   <link rel="stylesheet" href="../static/css/header.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,12 +24,82 @@
 
   <section>
 
+    <div id="un" class="menubar">
+      <ul class="menu">
+        <li>
+          <input type="checkbox" id="dep01">
+          <label for="dep01">문과<em></em></label>
+          <ul id="un">
+            <li><a href="#">어문</a></li>
+            <li><a href="#">사학</a></li>
+            <li><a href="#">철학</a></li>
+            <li><a href="#">심리학</a></li>
+            <li><a href="#">정치외교</a></li>
+          </ul>
+        </li>
+        <li>
+          <input type="checkbox" id="dep02">
+          <label for="dep02">상경<em></em></label>
+          <ul id="un">
+            <li><a href="#">경영</a></li>
+            <li><a href="#">경제</a></li>
+            <li><a href="#">무역</a></li>
+            <li><a href="#">세무</a></li>
+            <li><a href="#">회계</a></li>
+          </ul>
+        </li>
+        <li>
+          <input type="checkbox" id="dep03">
+          <label for="dep03">공과<em></em></label>
+          <ul id="un">
+            <li><a href="#">컴퓨터</a></li>
+            <li><a href="#">신소재</a></li>
+            <li><a href="#">산업</a></li>
+            <li><a href="#">전기/전자</a></li>
+            <li><a href="#">화학/생명</a></li>
+          </ul>
+        </li>
+        <li>
+          <input type="checkbox" id="dep04">
+          <label for="dep04">이과<em></em></label>
+          <ul id="un">
+            <li><a href="#">수학</a></li>
+            <li><a href="#">화학</a></li>
+            <li><a href="#">지학</a></li>
+            <li><a href="#">물리학</a></li>
+            <li><a href="#">생물학</a></li>
+          </ul>
+        </li>
+        <li>
+          <input type="checkbox" id="dep05">
+          <label for="dep05">기타<em></em></label>
+          <ul id="un">
+            <li><a href="#">교육</a></li>
+            <li><a href="#">디자인</a></li>
+            <li><a href="#">의예</a></li>
+            <li><a href="#">음악</a></li>
+            <li><a href="#">체육</a></li>
+          </ul>
+        </li>
+        <li>
+          <input type="checkbox" id="dep06">
+          <label for="dep06">학교생활<em></em></label>
+          <ul id="un">
+            <li><a href="#">교환학생</a></li>
+            <li><a href="#">취업</a></li>
+            <li><a href="#">편입</a></li>
+            <li><a href="#">학점</a></li>
+            <li><a href="#">휴학</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
     <ol>
       {% for post in article %}
         <li><a href="/detail">{{post[2]}}</a></li>
       {% endfor %}
     </ol>
-
   </section>
 </body>
 </html>
