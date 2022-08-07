@@ -39,9 +39,9 @@ def logout():
 
 @app.route('/question')
 def question():
-    db = pymysql.connect(host='localhost', port=3306, user='root', passwd='qkrtjdnjsdb1!', db='tag', charset='utf8')
+    db = pymysql.connect(host='localhost', port=3306, user='root', passwd='qkrtjdnjsdb1!', db='hackalearn', charset='utf8')
     tag = db.cursor()
-    sql = "select * from tag1"
+    sql = "select * from tag"
     tag.execute(sql)
     result = tag.fetchall()
     db.close()
@@ -49,7 +49,16 @@ def question():
 
 @app.route('/answer')
 def answer():
-    return render_template('answer.html')
+    db = pymysql.connect(host='localhost', port=3306, user='root', passwd='qkrtjdnjsdb1!', db='hackalearn', charset='utf8')
+    article = db.cursor()
+    sql = """
+        select * from articles
+    """
+    article.execute(sql)
+    articles = article.fetchall()
+    articles = list(articles)
+    db.close()
+    return render_template('answer.html', article=articles)
 
 @app.route('/user')
 def user():
@@ -59,6 +68,24 @@ def user():
 def write():
     return render_template('write.html')
 
+@app.route('/post', methods = ["get"])
+def post():
+
+    id = ID
+    tag = str(request.args.get('tag'))
+    title = str(request.args.get('title'))
+    content = str(request.args.get('content'))
+
+    db = pymysql.connect(host='localhost', port=3306, user='root', passwd='qkrtjdnjsdb1!', db='hackalearn', charset='utf8')
+    article = db.cursor()
+
+    sql = """
+        INSERT INTO articles VALUES(null, id, title, content, tag)
+    """;
+    article.execute(sql)
+    db.commit(); db.close()
+    return redirect(url_for('answer'))
+    
 
 
 if __name__ == '__main__':
