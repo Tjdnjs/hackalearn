@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="../static/css/header.css">
+  <link rel="stylesheet" href="../static/css/write.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
@@ -23,11 +24,12 @@
   </header>
   <section>
     <form action="/post" method="get">
-      <p>write question</p>
-      <div><input type="text" placeholder="tag" name="tag" /></div>
-      <div><input type="text" placeholder="title" name="title" /></div>
-      <div><input type="text" placeholder="content" name="content" /></div>
-      <div><input type="submit" value="post" /></div>
+      <div id="writed">
+        <div id="tagd"><input type="text" placeholder="tag" name="tag" /></div>
+        <div id="titled"><input type="text" placeholder="title" name="title" /></div>
+        <div id="contentd"><input type="text" placeholder="content" name="content" /></div>
+        <div id="postd"><input type="submit" value="post" /></div>
+      </div>
     </form>
 
   </section>
