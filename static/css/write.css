@@ -1,9 +1,9 @@
 #tagd input[type=text], #titled input[type=text]{
   width: 90%;
-  height: 2rem;
+  height: 1.8rem;
   font-size: 1rem;
   border: 0;
-  border-radius: 15px;
+  border-radius: 12.5px;
   outline: none;
   padding-left: 2rem;
   background-color: rgba(243, 243, 243, 0.68);
@@ -13,7 +13,7 @@
 }
 #contentd input[type=text]{
   width: 90%;
-  height: 25rem;
+  height: 20rem;
   font-size: 1rem;
   border: 0;
   border-radius: 15px;
@@ -34,7 +34,7 @@
   outline: none;
   background-color: rgb(130, 111, 255);
   display: block;
-  margin-right: 7%;
+  margin-right: 3%;
   margin-left: auto;
 }
 #postd input[type=submit]:hover{
@@ -42,8 +42,7 @@
 }
 #writed{
   display: block;
-  margin: 10%;
-  margin-top: 4.5rem;
+  margin: 1.8rem 15%;
   padding: 1rem 0.7rem 0.5rem 0.5rem;
   border-radius: 20px;
   background-color: rgb(224, 224, 230);
