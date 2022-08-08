@@ -7,8 +7,8 @@
   text-align: center;
   padding-bottom: 1rem;
   margin: .5rem;
-  border: 1px solid rgb(109, 155, 255);
-  background-color: rgb(135, 172, 251);
+  border: 1px solid rgb(186,176,255);
+  background-color: rgb(130, 111, 255);
 }
 
 #answer{
@@ -16,11 +16,11 @@
   text-align: center;
   margin: .5rem;
   padding-bottom: 1rem;
-  border: 1px solid rgb(109, 155, 255);
-  background-color: rgb(135, 172, 251);
+  border: 1px solid rgb(186,176,255);
+  background-color: rgb(130, 111, 255);
 }
 #qna{
-  color: rgb(27, 77, 142);
+  color: white;
   margin-top: 7.5rem;
   display: block;
   text-align: center;
