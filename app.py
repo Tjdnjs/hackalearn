@@ -2,7 +2,7 @@ from flask import Flask, request, render_template, session, redirect, url_for
 import pymysql
 
 app = Flask(__name__)
-app.secret_key = "hackalearn2022"
+app.secret_key = "heroku_0a4b1cb2682c7532022"
 
 ID = "admin"
 PW = "1"
@@ -37,7 +37,7 @@ def logout():
 
 @app.route('/question')
 def question():
-    db = pymysql.connect(host='localhost', port=3306, user='root', passwd='qkrtjdnjsdb1!', db='hackalearn', charset='utf8')
+    db = pymysql.connect(host='us-cdbr-east-06.cleardb.net', port=3306, user='bbc263342cae56', passwd='33c946ea', db='heroku_0a4b1cb2682c753', charset='utf8')
     tag = db.cursor()
     sql = "select * from tag"
     tag.execute(sql)
@@ -47,12 +47,9 @@ def question():
 
 @app.route('/answer')
 def answer():
-    db = pymysql.connect(host='localhost', port=3306, user='root', passwd='qkrtjdnjsdb1!', db='hackalearn', charset='utf8')
+    db = pymysql.connect(host='us-cdbr-east-06.cleardb.net', port=3306, user='bbc263342cae56', passwd='33c946ea', db='heroku_0a4b1cb2682c753', charset='utf8')
     article = db.cursor()
-    sql = """
-        select * from articles
-    """
-    article.execute(sql)
+    article.execute("select * from articles")
     articles = article.fetchall()
     articles = list(articles)
     db.close()
@@ -66,33 +63,31 @@ def user():
 def write():
     return render_template('write.html')
 
-@app.route('/post', methods = ["get"])
+@app.route('/post', methods = ["get", "post"])
 def post():
-
     id = ID
     tag = str(request.args.get('tag'))
     title = str(request.args.get('title'))
     content = str(request.args.get('content'))
-
-    db = pymysql.connect(host='localhost', port=3306, user='root', passwd='qkrtjdnjsdb1!', db='hackalearn', charset='utf8')
+    db = pymysql.connect(host='us-cdbr-east-06.cleardb.net', port=3306, user='bbc263342cae56', passwd='33c946ea', db='heroku_0a4b1cb2682c753', charset='utf8')
     article = db.cursor()
-    article.execute("INSERT INTO articles VALUES(%d, %s, %s, %s, %s)", [None, id, title, content, tag])
+    article.execute("INSERT INTO articles VALUES(%s, %s, %s, %s, %s)", [None, id, title, content, tag])
     db.commit();
-    article.execute("select * from articles where content = %s" [content])
-    key = article[-1]
-    return redirect(url_for('detail'), idx=key[0])
+    return redirect(url_for('answer'))
     
-@app.route('/detail', methods = ["get"])
-def detail():
-    idx = request.args.get('idx')
-    db = pymysql.connect(host='localhost', port=3306, user='root', passwd='qkrtjdnjsdb1!', db='hackalearn', charset='utf8')
+@app.route('/detail/<int:post>')
+def detail(post):
+    idx = int(post)
+    db = pymysql.connect(host='us-cdbr-east-06.cleardb.net', port=3306, user='bbc263342cae56', passwd='33c946ea', db='heroku_0a4b1cb2682c753', charset='utf8')
     article = db.cursor()
-    article.execute("select * from articles where MYKEY = %d" [idx])
+    sql="select * from articles where MYKEY = %d" %(idx)
+    article.execute(sql)
     result = article.fetchall()
-    id = result[1]
-    tag = result[4]
-    title = result[2]
-    content = result[3]
+    # print(result)
+    id = result[0][1]
+    tag = result[0][4]
+    title = result[0][2]
+    content = result[0][3]
     db.close()
     return render_template('detail.html', id=id, tag=tag, title=title, content=content)
 
