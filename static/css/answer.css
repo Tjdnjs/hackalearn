@@ -28,12 +28,12 @@ ul #un{
     color: rgb(91, 91, 91);
     transition: .2s;
     padding: .5rem .75rem;
-    background-color: white;
+    background-color:#e8e8f0;
     border-bottom: 0;
 }
 
 .menubar label+ul a:hover {
-    background-color: rgb(229, 229, 229);
+    background-color: #b5b5bdc6;
 }
 
 .menubar label+ul a:hover {
@@ -64,7 +64,7 @@ input[id*="dep"]+label {
     border-bottom: 0;
     color: rgb(70, 70, 70);
     font-size: .8rem;
-    background-color: rgb(205, 223, 255);
+    background-color: rgb(215, 210, 255);
     cursor: pointer;
     position: relative;
 }
