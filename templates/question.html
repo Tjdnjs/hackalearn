@@ -26,25 +26,25 @@
 
   {% if login == False %}
 
-    <div class="usermenu">
-      <li id="guide">Please Login</li>
-      <ul id="usermenu">
-              <li><a href="login.html" id="prof1">Sign in</a></li>
-              <li><a href="/login">Login</a></li>
-      </ul>
-    </div>
+  <div class="usermenu">
+    <li id="guide">Please Login</li>
+    <ul id="usermenu">
+            <li><a href="/login" id="prof1">Sign in</a></li>
+            <li><a href="/login">Login</a></li>
+    </ul>
+  </div>
 
-    {%else%}
+  {%else%}
 
-    <div class="usermenu">
-      <li id="guide">{{username}}님</li>
-      <ul id="usermenu">
-              <li><a href="/user" id="prof1">Usermenu</a></li>
-              <li><a href="/logout">Logout</a></li>
-      </ul>
-    </div>
+  <div class="usermenu">
+    <li id="guide">{{username}}님</li>
+    <ul id="usermenu">
+            <li><a href="/user" id="prof1">Usermenu</a></li>
+            <li><a href="/logout">Logout</a></li>
+    </ul>
+  </div>
 
-    {%endif%}
+  {%endif%}
 
   <section>
     <h2>어떤 게시판에 글을 작성하시겠습니까 ?</h2>

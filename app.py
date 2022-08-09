@@ -10,7 +10,7 @@ PW = "1"
 @app.route('/')
 def index():
     # html file은 templates 폴더에 위치해야 함
-    return render_template('index.html')
+    return render_template('index.html', username=session.get("id"))
 
 @app.route('/login')
 def login():
@@ -43,7 +43,7 @@ def question():
     tag.execute(sql)
     result = tag.fetchall()
     db.close()
-    return render_template('question.html', tag=result)
+    return render_template('question.html', tag=result, username=session.get("id"))
 
 @app.route('/answer')
 def answer():
@@ -53,15 +53,15 @@ def answer():
     articles = article.fetchall()
     articles = list(articles)
     db.close()
-    return render_template('answer.html', article=articles)
+    return render_template('answer.html', article=articles, username=session.get("id"))
 
 @app.route('/user')
 def user():
-    return render_template('user.html')
+    return render_template('user.html', username=session.get("id"))
 
 @app.route('/write')
 def write():
-    return render_template('write.html')
+    return render_template('write.html', username=session.get("id"))
 
 @app.route('/post', methods = ["get", "post"])
 def post():
@@ -89,7 +89,7 @@ def detail(post):
     title = result[0][2]
     content = result[0][3]
     db.close()
-    return render_template('detail.html', id=id, tag=tag, title=title, content=content)
+    return render_template('detail.html', id=id, tag=tag, title=title, content=content, username=session.get("id"))
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port="8080")
