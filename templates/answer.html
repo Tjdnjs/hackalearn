@@ -12,38 +12,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/f76d1c9984.js" crossorigin="anonymous"></script>
   <body>
-  <header>
-    <h1 id="title">TITLE</h1>
-    <div id="menu" method = "get">
-      <a href="/">HOME</a>
-      <a href="/question">QUESTION</a>
-      <a href="/answer">ANSWER</a>
-      <a href="#" id = "us"><i class="fa-regular fa-user"></i></a>
-    </div>
-    <div id="design"></div>
-  </header>
-
-  {% if login == False %}
-
-    <div class="usermenu">
-      <li id="guide">Please Login</li>
-      <ul id="usermenu">
-              <li><a href="login.html" id="prof1">Sign in</a></li>
-              <li><a href="/login">Login</a></li>
-      </ul>
-    </div>
-
-    {%else%}
-
-    <div class="usermenu">
-      <li id="guide">{{username}}님</li>
-      <ul id="usermenu">
-              <li><a href="/user" id="prof1">Usermenu</a></li>
-              <li><a href="/logout">Logout</a></li>
-      </ul>
-    </div>
-
-    {%endif%}
+    <header>
+      {% if login == False %}
+      <div id="menu" method = "get">
+        <a href="/question">QUESTION</a>
+        <a href="/answer">ANSWER</a>
+        <h1 id="title"><a href="/">TITLE</a></h1>
+        <a href="#">Sign in</a>
+        <a href="/login">Login</a>
+      </div>
+      {%else%}
+      <div id="menu" method = "get">
+        <a href="/question">QUESTION</a>
+        <a href="/answer">ANSWER</a>
+        <h1 id="title"><a href="/">TITLE</a></h1>
+        <a href="/user" id="prof1">{{username}}님</a>
+        <a href="/logout">Logout</a>
+      </div>
+      {%endif%}
+    </header>
 
   <section>
 
