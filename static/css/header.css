@@ -43,3 +43,49 @@ header{
   width: 100%;
   height: 1.2rem;
 }
+
+.usermenu{
+  font-family: 'Noto Sans KR', sans-serif;
+  position: absolute;
+  visibility: hidden;
+  top: 6rem;
+  right:30rem;
+  background-color: rgb(224, 228, 255);
+  color: rgb(76, 76, 76);
+  border-radius: .5rem;
+}
+.usermenu.active{
+  visibility: visible;
+}
+.usermenu ul{
+  padding:0; margin:0;
+}
+.usermenu li{
+  list-style-type: none;
+  margin:0;
+}
+.usermenu a{
+  display:block;
+  font-size: .8rem;
+  padding:.5rem 3rem .5rem 1rem;
+  color: rgb(91, 91, 91);
+  text-decoration: none;
+}
+.usermenu #usermenu a:hover{
+  text-decoration: none;
+  color: rgb(93, 98, 254);
+}
+.usermenu a:visited{
+  text-decoration: none;
+  color: rgb(91, 91, 91);
+}
+.usermenu::before{
+  content:'';
+  position:absolute;
+  top:-.25rem;
+  right:1.25rem;
+  width:.5rem;
+  height: .5rem;
+  background-color: rgb(224, 228, 255);
+  transform:rotate(45deg);
+}

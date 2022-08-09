@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/f76d1c9984.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
@@ -17,15 +18,37 @@
       <a href="/">HOME</a>
       <a href="/question">QUESTION</a>
       <a href="/answer">ANSWER</a>
-      <a href="/user">USER</a>
-      <a href="/login">LOGIN</a>
+      <a href="#" id = "us"><i class="fa-regular fa-user"></i></a>
     </div>
     <div id="design"></div>
   </header>
+
+  {% if login == False %}
+
+    <div class="usermenu">
+      <li id="guide">Please Login</li>
+      <ul id="usermenu">
+              <li><a href="login.html" id="prof1">Sign in</a></li>
+              <li><a href="/login">Login</a></li>
+      </ul>
+    </div>
+
+    {%else%}
+
+    <div class="usermenu">
+      <li id="guide">{{username}}님</li>
+      <ul id="usermenu">
+              <li><a href="/user" id="prof1">Usermenu</a></li>
+              <li><a href="/logout">Logout</a></li>
+      </ul>
+    </div>
+
+    {%endif%}
   <section>
     user
 
   </section>
+  <script src="../static/js/toggle.js"></script>
 
 </body>
 </html>
