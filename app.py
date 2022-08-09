@@ -11,13 +11,14 @@ users = {
     'admin': '1'
 }
 
+def userexist():
+    try: 
+        if session['id']: return True
+    except : return False
+
 @app.route('/')
 def index():
-    login = False
-    try: 
-        if session['id']: login = True
-    except : pass
-
+    login = userexist()
     return render_template('index.html', username=session.get("id"), login=login)
 
 @app.route('/login')
@@ -45,10 +46,7 @@ def logout():
 
 @app.route('/question')
 def question():
-    login = False
-    try: 
-        if session['id']: login = True
-    except : pass
+    login = userexist()
     db = pymysql.connect(host='us-cdbr-east-06.cleardb.net', port=3306, user='bbc263342cae56', passwd='33c946ea', db='heroku_0a4b1cb2682c753', charset='utf8')
     tag = db.cursor()
     sql = "select * from tag"
@@ -59,10 +57,7 @@ def question():
 
 @app.route('/answer')
 def answer():
-    login = False
-    try: 
-        if session['id']: login = True
-    except : pass
+    login = userexist()
     db = pymysql.connect(host='us-cdbr-east-06.cleardb.net', port=3306, user='bbc263342cae56', passwd='33c946ea', db='heroku_0a4b1cb2682c753', charset='utf8')
     article = db.cursor()
     article.execute("select * from articles")
@@ -73,26 +68,18 @@ def answer():
 
 @app.route('/user')
 def user():
-    login = False
-    try: 
-        if session['id']: login = True
-    except : pass
+    login = userexist()
     return render_template('user.html', username=session.get("id"), login=login)
 
 @app.route('/write')
 def write():
-    login = False
-    try: 
-        if session['id']: login = True
-    except : pass
+    login = userexist()
     return render_template('write.html', username=session.get("id"), login=login)
 
 @app.route('/post', methods = ["get", "post"])
 def post():
-    login = False
-    try: 
-        if session['id']: login = True
-    except : return render_template('errorwrite.html')
+    login = userexist() 
+    if login == False: return render_template('errorwrite.html')
 
     id = session.get("id")
 
@@ -107,10 +94,7 @@ def post():
     
 @app.route('/detail/<int:post>')
 def detail(post):
-    login = False
-    try: 
-        if session['id']: login = True
-    except : pass
+    login = userexist() 
     idx = int(post)
     db = pymysql.connect(host='us-cdbr-east-06.cleardb.net', port=3306, user='bbc263342cae56', passwd='33c946ea', db='heroku_0a4b1cb2682c753', charset='utf8')
     article = db.cursor()
