@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, session, redirect, url_for, jsonify, make_response
+from flask import Flask, request, render_template, session, redirect, url_for
 import os
 import pymysql
 
@@ -71,7 +71,7 @@ def write():
 def post():
     id = session.get("id")
     if id == None:
-        return make_response(jsonify(success=False), 401)
+        return render_template('errorwrite.html')
     tag = str(request.args.get('tag'))
     title = str(request.args.get('title'))
     content = str(request.args.get('content'))
