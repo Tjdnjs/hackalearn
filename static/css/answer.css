@@ -3,11 +3,16 @@ ol{
     left: 30%;
 }
 
+ul #un{
+    display: block;
+    padding: 0.1rem 0.75rem;
+}
+
 .menubar {
     opacity: .85;
     position: relative;
-    font-family: 'Roboto Mono', monospace;
-    top: 12rem;
+    font-family: 'Nanum Gothic', sans-serif;
+    top: 6rem;
     left: 2rem;
     width: 10rem;
 }
@@ -22,10 +27,8 @@ ol{
     display: block;
     color: rgb(91, 91, 91);
     transition: .2s;
-    margin: 0 .75rem;
     padding: .5rem .75rem;
     background-color: white;
-    border: 1.5px solid rgb(70, 70, 70);
     border-bottom: 0;
 }
 
@@ -48,11 +51,11 @@ ul.cur,
     padding: 0;
 }
 
-input[id*="reg"] {
+input[id*="dep"] {
     display: none;
 }
 
-input[id*="reg"]+label {
+input[id*="dep"]+label {
     display: block;
     padding: .5rem .75rem;
     padding-right: 0;
@@ -66,17 +69,17 @@ input[id*="reg"]+label {
     position: relative;
 }
 
-input[id*="reg"]+label a {
+input[id*="dep"]+label a {
     color: rgb(70, 70, 70);
     text-decoration: none;
 }
 
-input[id*="reg"]+label a:visited {
+input[id*="dep"]+label a:visited {
     color: rgb(70, 70, 70);
     text-decoration: none;
 }
 
-input[id*="reg"]+label a:hover {
+input[id*="dep"]+label a:hover {
     color: rgb(70, 70, 70);
     text-decoration: none;
 }
@@ -86,7 +89,7 @@ input[id*="reg"]+label a:hover {
 }
 
 .un {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
     font-weight: 400;
 }
 
