@@ -24,7 +24,7 @@
     <div id="design"></div>
   </header>
 
-  {% if username == None %}
+  {% if not session["id"] %}
 
     <div class="usermenu">
       <li id="guide">Please Login</li>
