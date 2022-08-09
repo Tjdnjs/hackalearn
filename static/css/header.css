@@ -5,9 +5,6 @@ html, body{
     font-family: 'Nanum Gothic', sans-serif;
 }
 
-header{
-  height: 5rem;
-}
 
 #title{
   text-align: center;
@@ -47,12 +44,13 @@ header{
 .usermenu{
   font-family: 'Noto Sans KR', sans-serif;
   position: absolute;
+  top: 13%;
+  right: 35%;
   visibility: hidden;
-  top: 6rem;
-  right:30rem;
   background-color: rgb(224, 228, 255);
   color: rgb(76, 76, 76);
   border-radius: .5rem;
+  padding-left:0.5rem;
 }
 .usermenu.active{
   visibility: visible;
