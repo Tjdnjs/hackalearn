@@ -1,11 +1,15 @@
-from flask import Flask, request, render_template, session, redirect, url_for
+from flask import Flask, request, render_template, session, redirect, url_for, jsonify, make_response
+import os
 import pymysql
 
 app = Flask(__name__)
-app.secret_key = "heroku_0a4b1cb2682c7532022"
+app.secret_key = os.urandom(24)
 
-ID = "admin"
-PW = "1"
+users = {
+    'guest': 'guest',
+    'user': 'user1234',
+    'admin': '1'
+}
 
 @app.route('/')
 def index():
@@ -24,7 +28,7 @@ def signin():
     userid = request.args.get('id')
     passwd = request.args.get('pw')
     
-    if userid == ID and passwd == PW:
+    if passwd == users[userid]:
         session["id"] = userid
         return redirect(url_for("index"))
     else:
@@ -65,7 +69,9 @@ def write():
 
 @app.route('/post', methods = ["get", "post"])
 def post():
-    id = ID
+    id = session.get("id")
+    if id == None:
+        return make_response(jsonify(success=False), 401)
     tag = str(request.args.get('tag'))
     title = str(request.args.get('title'))
     content = str(request.args.get('content'))
