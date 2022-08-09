@@ -12,26 +12,30 @@ body{
     display : flex;
     flex-direction : column;
     border-radius : 1rem;
-    margin-top: 9rem;
+    margin-top: 6rem;
     width : 100%;
     justify-content : center;
 }
-
+form{
+    background-color: #F1F1F2;
+    width: 30rem;
+    padding: 2rem 0;
+    border-radius: 1rem;
+    margin:auto;
+}
 .int-area input {
     width: 20rem;
     height: 1rem;
-    font-size: .7rem;
+    font-size: .9rem;
     padding: .5rem 0;
     border: 0;
     border-bottom: 1px solid rgb(132, 132, 132);
     background: transparent;
     color: rgb(78, 78, 78);
     outline: 0;
-}
-
-.int-area:first-child input {
     margin-bottom: 1.5rem;
 }
+
 
 .btn-area {
     text-align: center;
