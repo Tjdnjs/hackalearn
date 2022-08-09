@@ -11,16 +11,35 @@ header{
 
 #title{
   text-align: center;
+  color: white;
   padding: .5rem;
-  border-bottom: 1px solid gray;
   margin: 0;
+  background-color: rgb(130, 111, 255);
+  background: linear-gradient(to bottom right, rgb(121, 101, 253),rgb(196, 188, 252));
 }
 #menu{
   text-align: center;
-  border-bottom: 1px solid gray;
+  background-color: rgb(130, 111, 255);
+  background: linear-gradient(to left bottom, rgb(196, 188, 252), rgb(121, 101, 253));
+  padding: 0.7rem;
 }
 #menu a{
-  color: gray;
+  display: inline-block;
+  width: 4.5rem;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 12px;
+  padding: 0.2rem 0.5rem;
+  background-color: #EDEDEF;
+  color: black;
   text-decoration: none;
-  margin: .5rem;
+  margin: 0.2rem;
+}
+#menu a:hover{
+  background-color: #ededefc6;
+}
+#design{
+  background-color: #E0E0E6;
+  width: 100%;
+  height: 1.2rem;
 }
