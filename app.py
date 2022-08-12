@@ -11,6 +11,17 @@ users = {
     'admin': '1'
 }
 
+def tag():
+    db = pymysql.connect(host='us-cdbr-east-06.cleardb.net', port=3306, user='bbc263342cae56', passwd='33c946ea', db='heroku_0a4b1cb2682c753', charset='utf8')
+    tag = db.cursor()
+    sql = "select * from tag"
+    tag.execute(sql)
+    result = tag.fetchall()
+    db.close()
+    return result
+
+result = tag()
+
 def userexist():
     try: 
         if session['id']: return True
@@ -47,12 +58,6 @@ def logout():
 @app.route('/question')
 def question():
     login = userexist()
-    db = pymysql.connect(host='us-cdbr-east-06.cleardb.net', port=3306, user='bbc263342cae56', passwd='33c946ea', db='heroku_0a4b1cb2682c753', charset='utf8')
-    tag = db.cursor()
-    sql = "select * from tag"
-    tag.execute(sql)
-    result = tag.fetchall()
-    db.close()
     return render_template('question.html', tag=result, username=session.get("id"), login=login)
 
 @app.route('/answer')
@@ -60,11 +65,29 @@ def answer():
     login = userexist()
     db = pymysql.connect(host='us-cdbr-east-06.cleardb.net', port=3306, user='bbc263342cae56', passwd='33c946ea', db='heroku_0a4b1cb2682c753', charset='utf8')
     article = db.cursor()
-    article.execute("select * from articles")
+    sql = "select * from articles"
+    article.execute(sql)
     articles = article.fetchall()
     articles = list(articles)
     db.close()
-    return render_template('answer.html', article=articles, username=session.get("id"), login=login)
+    return render_template('answer.html', article=articles, tag = result, username=session.get("id"), login=login)
+
+@app.route('/answer/<string:cate>')
+def answer_detail(cate):
+    login = userexist()
+    category = str(cate)
+    try:
+        db = pymysql.connect(host='us-cdbr-east-06.cleardb.net', port=3306, user='bbc263342cae56', passwd='33c946ea', db='heroku_0a4b1cb2682c753', charset='utf8')
+        article = db.cursor()
+        sql = "select * from articles where tag = '%s'" %(category)
+        print(sql)
+        article.execute(sql)
+        articles = article.fetchall()
+        articles = list(articles)
+        db.close()
+        return render_template('answer.html', article=articles, tag = result, username=session.get("id"), login=login)
+    except: 
+        return redirect(url_for('answer'))
 
 @app.route('/user')
 def user():
