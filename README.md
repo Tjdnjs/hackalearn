@@ -15,3 +15,19 @@
 |:---|:---|
 |Front|index.html, login.html, question.html, header 틀 제작|
 |Back|페이지 routing / login, logout 기능 구현 <br>데이터베이스 구조 기획|
+
+## 2️⃣ 8/3 ~ 8/9
+
+### 강의
+
+|Stack|Lecture|
+|:---|:---|
+|Front|Code it - 인터랙티브 자바스크립트<br>Code it - 모던 자바스크립트|
+|Back|Inflearn - 가장 빠른 풀스택 (Python flask)<br>섹션 5. flask로 백/프론트 구현하기 ~ 섹션 7. 다양한 flask 백엔드 기능<br><br>Inflearn - SQL/DB(MySQL)<br>섹션 3. 데이터 다루기 (CRUD) ~ 섹션 4. 파이썬으로 다루는 MySQL (pymysql)|
+
+### 개발 진행 상황
+
+|Stack|Status|
+|:---|:---|
+|Front|index.html 수정<br>write.html, answer.html 메뉴바 제작|
+|Back|게시글 CR 구현<br>로그인 된 사용자만 글 작성 가능하도록 수정<br>앱 및 데이터베이스 배포|
