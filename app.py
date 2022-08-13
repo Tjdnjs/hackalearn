@@ -102,22 +102,22 @@ def user():
     login = userexist()
     return render_template('user.html', username=session.get("id"), login=login)
 
-@app.route('/write')
-def write():
+@app.route('/write/<string:tag_>')
+def write(tag_):
     login = userexist()
-    return render_template('write.html', username=session.get("id"), login=login)
+    return render_template('write.html', username=session.get("id"), login=login, tag_ = tag_)
 
-@app.route('/post', methods = ["get", "post"])
-def post():
+@app.route('/post/<string:tag_>', methods = ["get", "post"])
+def post(tag_):
     login = userexist() 
     if login == False: return render_template('errorwrite.html')
     id = session.get("id")
-    tag = str(request.args.get('tag'))
+    # tag = str(request.args.get('tag'))
     title = str(request.args.get('title'))
     content = str(request.args.get('content'))
     db = pymysql.connect(host='us-cdbr-east-06.cleardb.net', port=3306, user='bbc263342cae56', passwd='33c946ea', db='heroku_0a4b1cb2682c753', charset='utf8')
     article = db.cursor()
-    article.execute("INSERT INTO articles VALUES(%s, %s, %s, %s, %s)", [None, id, title, content, tag])
+    article.execute("INSERT INTO articles VALUES(%s, %s, %s, %s, %s)", [None, id, title, content, tag_])
     db.commit();
     return redirect(url_for('answer', login=login, tag=result))
     
