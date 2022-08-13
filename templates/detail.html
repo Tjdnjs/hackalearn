@@ -1,3 +1,16 @@
 <h1>{{title}}</h1>
 
 <div>{{content}}</div>
+
+<div>
+    <ul>
+        {% for com in co %}
+          <li>{{com[2]}}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<form action="/detail/{{key}}" method="post">
+    <input type="text" placeholder="comment" name="comment"></input>
+    <input type="submit" value="답변 등록">
+</form>

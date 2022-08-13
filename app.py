@@ -11,6 +11,16 @@ users = {
     'admin': '1'
 }
 
+def comments(post):
+    db = pymysql.connect(host='us-cdbr-east-06.cleardb.net', port=3306, user='bbc263342cae56', passwd='33c946ea', db='heroku_0a4b1cb2682c753', charset='utf8')
+    co_ = db.cursor()
+    sql = "select * from comment where art_key = %d" %(post)
+    co_.execute(sql)
+    result = co_.fetchall()
+    result = list(result)
+    db.close()
+    return result
+
 def tag():
     db = pymysql.connect(host='us-cdbr-east-06.cleardb.net', port=3306, user='bbc263342cae56', passwd='33c946ea', db='heroku_0a4b1cb2682c753', charset='utf8')
     tag = db.cursor()
@@ -76,17 +86,16 @@ def answer():
 def answer_detail(cate):
     login = userexist()
     category = str(cate)
-    try:
-        db = pymysql.connect(host='us-cdbr-east-06.cleardb.net', port=3306, user='bbc263342cae56', passwd='33c946ea', db='heroku_0a4b1cb2682c753', charset='utf8')
-        article = db.cursor()
-        sql = "select * from articles where tag = '%s'" %(category)
-        article.execute(sql)
-        articles = article.fetchall()
-        articles = list(articles)
-        db.close()
-        return render_template('answer.html', article=articles, tag = result, username=session.get("id"), login=login)
-    except: 
-        return redirect(url_for('answer'))
+    db = pymysql.connect(host='us-cdbr-east-06.cleardb.net', port=3306, user='bbc263342cae56', passwd='33c946ea', db='heroku_0a4b1cb2682c753', charset='utf8')
+    article = db.cursor()
+    sql = "select * from articles where tag = '%s'" %(category)
+    article.execute(sql)
+    articles = article.fetchall()
+    articles = list(articles)
+    db.close()
+    return render_template('answer.html', article=articles, tag = result, username=session.get("id"), login=login)
+
+
 
 @app.route('/user')
 def user():
@@ -102,9 +111,7 @@ def write():
 def post():
     login = userexist() 
     if login == False: return render_template('errorwrite.html')
-
     id = session.get("id")
-
     tag = str(request.args.get('tag'))
     title = str(request.args.get('title'))
     content = str(request.args.get('content'))
@@ -114,22 +121,31 @@ def post():
     db.commit();
     return redirect(url_for('answer', login=login, tag=result))
     
-@app.route('/detail/<int:post>')
+@app.route('/detail/<int:post>', methods = ["get", "post"])
 def detail(post):
-    login = userexist() 
-    idx = int(post)
-    db = pymysql.connect(host='us-cdbr-east-06.cleardb.net', port=3306, user='bbc263342cae56', passwd='33c946ea', db='heroku_0a4b1cb2682c753', charset='utf8')
-    article = db.cursor()
-    sql="select * from articles where MYKEY = %d" %(idx)
-    article.execute(sql)
-    result = article.fetchall()
-    # print(result)
-    id = result[0][1]
-    tag = result[0][4]
-    title = result[0][2]
-    content = result[0][3]
-    db.close()
-    return render_template('detail.html', id=id, tag=tag, title=title, content=content, username=session.get("id"), login=login)
+    if request.method == 'GET':
+        login = userexist() 
+        db = pymysql.connect(host='us-cdbr-east-06.cleardb.net', port=3306, user='bbc263342cae56', passwd='33c946ea', db='heroku_0a4b1cb2682c753', charset='utf8')
+        article = db.cursor()
+        sql="select * from articles where MYKEY = %d" %(post)
+        article.execute(sql)
+        article = article.fetchall()
+        id = article[0][1]
+        tag = article[0][4]
+        title = article[0][2]
+        content = article[0][3]
+        db.close()
+        return render_template('detail.html', key = post, id=id, tag=tag, title=title, content=content, co=comments(post),username=session.get("id"), login=login)
+    elif request.method == 'POST':
+        login = userexist() 
+        id = session.get("id")
+        content = request.form['comment']
+        print(content)
+        db = pymysql.connect(host='us-cdbr-east-06.cleardb.net', port=3306, user='bbc263342cae56', passwd='33c946ea', db='heroku_0a4b1cb2682c753', charset='utf8')
+        comment = db.cursor()
+        comment.execute("INSERT INTO comment VALUES(%s, %s, %s, %s)", [None, id, content, post])
+        db.commit();
+        return redirect(url_for('detail', post=post))
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port="8080")
