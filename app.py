@@ -80,7 +80,6 @@ def answer_detail(cate):
         db = pymysql.connect(host='us-cdbr-east-06.cleardb.net', port=3306, user='bbc263342cae56', passwd='33c946ea', db='heroku_0a4b1cb2682c753', charset='utf8')
         article = db.cursor()
         sql = "select * from articles where tag = '%s'" %(category)
-        print(sql)
         article.execute(sql)
         articles = article.fetchall()
         articles = list(articles)
@@ -113,7 +112,7 @@ def post():
     article = db.cursor()
     article.execute("INSERT INTO articles VALUES(%s, %s, %s, %s, %s)", [None, id, title, content, tag])
     db.commit();
-    return redirect(url_for('answer'), login=login)
+    return redirect(url_for('answer', login=login, tag=result))
     
 @app.route('/detail/<int:post>')
 def detail(post):
