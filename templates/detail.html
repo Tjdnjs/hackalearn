@@ -1,16 +1,63 @@
-<h1>{{title}}</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/detail.css">
+    <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f76d1c9984.js" crossorigin="anonymous"></script>
+</head>
+<body>
 
-<div>{{content}}</div>
+  <header>
+    {% if login == False %}
 
-<div>
-    <ul>
-        {% for com in co %}
-          <li>{{com[2]}}</li>
-        {% endfor %}
-    </ul>
-</div>
 
-<form action="/detail/{{key}}" method="post">
-    <input type="text" placeholder="comment" name="comment"></input>
-    <input type="submit" value="답변 등록">
-</form>
+    <div id="menu" method = "get">
+      <a href="/question">QUESTION</a>
+      <a href="/answer">ANSWER</a>
+      <h1 id="title"><a href="/">TITLE</a></h1>
+      <a href="#">Sign in</a>
+      <a href="/login">Login</a>
+    </div>
+    {%else%}
+    <div id="menu" method = "get">
+      <a href="/question">QUESTION</a>
+      <a href="/answer">ANSWER</a>
+      <h1 id="title"><a href="/">TITLE</a></h1>
+      <a href="/user" id="prof1">{{username}}님</a>
+      <a href="/logout">Logout</a>
+    </div>
+    {%endif%}
+  </header>
+
+  <div id="detaild">
+    <h1 id="titled"><span>제목&nbsp;|&nbsp;</span>{{title}}</h1>
+
+    <div id="contentd">{{content}}</div>
+  </div>
+  
+  <div>
+      <ul id="uld">
+          {% for com in co %}
+            <li id="answerd">{{com[2]}}</li>
+          {% endfor %}
+      </ul>
+  </div>
+
+  <form action="/detail/{{key}}" method="post">
+    <div id="subd">
+      <input id="commentd" type="text" placeholder="comment" name="comment"></input>
+      <input id="submitd" type="submit" value="답변 등록">
+    </div>  
+  </form>
+
+</body>
+</html>
+
+
