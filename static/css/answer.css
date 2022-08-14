@@ -1,4 +1,45 @@
-ol{
-    position: absolute;
-    left: 30%;
+.board {
+    width: 60%;
+    height: 15%;
+    margin: auto;
+    margin-right:20%;
+    border-radius:8px;
+}
+
+.table {
+    font-size: 13px;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 1rem;
+    margin-left: 5%;
+    margin-right:20%;
+    text-align: center;
+}
+
+.tablehead {
+    background-color: rgb(215,210,255);
+    border-radius: 20px;
+}
+
+
+
+td {
+    height: 2rem;
+    border-bottom: 1px solid rgb(226, 226, 226);
+}
+.no{
+    width:20%;
+}
+.title{
+    width:55%;
+}
+.writer{
+    width:25%;
+
+}
+
+
+
+tr td:nth-child(2) {
+    width: 70px;
 }
