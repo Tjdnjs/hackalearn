@@ -4,7 +4,7 @@ section, #table, .column{
 section{
     flex-direction: column;
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 9rem;
     align-items: center;
 }
 

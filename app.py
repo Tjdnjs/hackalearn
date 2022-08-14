@@ -135,7 +135,7 @@ def detail(post):
         title = article[0][2]
         content = article[0][3]
         db.close()
-        return render_template('detail.html', key = post, id=id, tag=tag, title=title, content=content, co=comments(post),username=session.get("id"), login=login)
+        return render_template('detail.html', key = post, id=id, tag=result, title=title, content=content, co=comments(post),username=session.get("id"), login=login)
     elif request.method == 'POST':
         login = userexist() 
         id = session.get("id")

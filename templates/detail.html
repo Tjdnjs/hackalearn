@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../static/css/detail.css">
     <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="stylesheet" href="../static/css/sidemenu.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
@@ -16,7 +17,6 @@
 
   <header>
     {% if login == False %}
-
 
     <div id="menu" method = "get">
       <a href="/question">QUESTION</a>
@@ -35,27 +35,110 @@
     </div>
     {%endif%}
   </header>
-
-  <div id="detaild">
-    <h1 id="titled"><span>제목&nbsp;|&nbsp;</span>{{title}}</h1>
-
-    <div id="contentd">{{content}}</div>
+  <div id="un" class="menubar">
+    <ul class="menu">
+      <li>
+        <input type="checkbox" id="dep01">
+        <label for="dep01">{{tag[0][1]}}<em></em></label>
+        <ul id="un">
+          <li><a href="../answer/{{tag[0][2]}}">{{tag[0][2]}}</a></li>
+          <li><a href="../answer/{{tag[0][3]}}">{{tag[0][3]}}</a></li>
+          <li><a href="../answer/{{tag[0][4]}}">{{tag[0][4]}}</a></li>
+          <li><a href="../answer/{{tag[0][5]}}">{{tag[0][5]}}</a></li>
+          <li><a href="../answer/{{tag[0][6]}}">{{tag[0][6]}}</a></li>
+        </ul>
+      </li>
+      <li>
+        <input type="checkbox" id="dep02">
+        <label for="dep02">{{tag[1][1]}}<em></em></label>
+        <ul id="un">
+          <li><a href="../answer/{{tag[1][2]}}">{{tag[1][2]}}</a></li>
+          <li><a href="../answer/{{tag[1][3]}}">{{tag[1][3]}}</a></li>
+          <li><a href="../answer/{{tag[1][4]}}">{{tag[1][4]}}</a></li>
+          <li><a href="../answer/{{tag[1][5]}}">{{tag[1][5]}}</a></li>
+          <li><a href="../answer/{{tag[1][6]}}">{{tag[1][6]}}</a></li>
+        </ul>
+      </li>
+      <li>
+        <input type="checkbox" id="dep03">
+        <label for="dep03">{{tag[2][1]}}<em></em></label>
+        <ul id="un">
+          <li><a href="../answer/{{tag[2][2]}}">{{tag[2][2]}}</a></li>
+          <li><a href="../answer/{{tag[2][3]}}">{{tag[2][3]}}</a></li>
+          <li><a href="../answer/{{tag[2][4]}}">{{tag[2][4]}}</a></li>
+          <li><a href="../answer/{{tag[2][5]}}">{{tag[2][5]}}</a></li>
+          <li><a href="../answer/{{tag[2][6]}}">{{tag[2][6]}}</a></li>
+        </ul>
+      </li>
+      <li>
+        <input type="checkbox" id="dep04">
+        <label for="dep04">{{tag[3][1]}}<em></em></label>
+        <ul id="un">
+          <li><a href="../answer/{{tag[3][2]}}">{{tag[3][2]}}</a></li>
+          <li><a href="../answer/{{tag[3][3]}}">{{tag[3][3]}}</a></li>
+          <li><a href="../answer/{{tag[3][4]}}">{{tag[3][4]}}</a></li>
+          <li><a href="../answer/{{tag[3][5]}}">{{tag[3][5]}}</a></li>
+          <li><a href="../answer/{{tag[3][6]}}">{{tag[3][6]}}</a></li>
+        </ul>
+      </li>
+      <li>
+        <input type="checkbox" id="dep05">
+        <label for="dep05">{{tag[4][1]}}<em></em></label>
+        <ul id="un">
+          <li><a href="../answer/{{tag[4][2]}}">{{tag[4][2]}}</a></li>
+          <li><a href="../answer/{{tag[4][3]}}">{{tag[4][3]}}</a></li>
+          <li><a href="../answer/{{tag[4][4]}}">{{tag[4][4]}}</a></li>
+          <li><a href="../answer/{{tag[4][5]}}">{{tag[4][5]}}</a></li>
+          <li><a href="../answer/{{tag[4][6]}}">{{tag[4][6]}}</a></li>
+        </ul>
+      </li>
+      <li>
+        <input type="checkbox" id="dep06">
+        <label for="dep06">{{tag[5][1]}}<em></em></label>
+        <ul id="un">
+          <li><a href="../answer/{{tag[5][2]}}">{{tag[5][2]}}</a></li>
+          <li><a href="../answer/{{tag[5][3]}}">{{tag[5][3]}}</a></li>
+          <li><a href="../answer/{{tag[5][4]}}">{{tag[5][4]}}</a></li>
+          <li><a href="../answer/{{tag[5][5]}}">{{tag[5][5]}}</a></li>
+          <li><a href="../answer/{{tag[5][6]}}">{{tag[5][6]}}</a></li>
+        </ul>
+      </li>
+    </ul>
   </div>
-  
-  <div>
-      <ul id="uld">
-          {% for com in co %}
-            <li id="answerd">{{com[2]}}</li>
-          {% endfor %}
-      </ul>
-  </div>
+  <section id = "content">
+    <h1>Q.</h1>
+    <div id="detaild">
+      <h3 id="titled">{{title}}</h3>
+      <div id= "id">작성자 : {{id}}</div>
+      <div id="contentd">{{content}}</div>
+    </div>
+    <h1 id="a">A.</h1>
+    <div id="answer_area">
 
-  <form action="/detail/{{key}}" method="post">
-    <div id="subd">
-      <input id="commentd" type="text" placeholder="comment" name="comment"></input>
-      <input id="submitd" type="submit" value="답변 등록">
-    </div>  
-  </form>
+      <form action="/detail/{{key}}" method="post">
+        <div id="subd">
+          <input id="commentd" type="text" placeholder="comment" name="comment">
+          <input id="submitd" type="submit" value="답변 등록">
+        </div>  
+      </form>
+
+      <div id="comment">
+
+          <ul id="uld">
+              {% for com in co %}
+              <div class="answer">
+                <div class="id">작성자 : {{com[1]}}</div>
+                <li class="answerd">{{com[2]}}</li>
+              </div>
+              {% endfor %}
+          </ul>
+
+      </div>
+    </div>
+
+  </section>
+
+
 
 </body>
 </html>

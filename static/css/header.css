@@ -1,5 +1,5 @@
 html, body{
-    height : 100%;
+    /* height : 100%; */
     margin : 0;
     font-size : 20px;
     font-family: 'Nanum Gothic', sans-serif;
@@ -7,6 +7,9 @@ html, body{
 
 header{
   height: 5rem;
+  position: fixed;
+  width: 100%;
+  top:0; z-index: 50;
 }
 
 #title{
@@ -19,7 +22,6 @@ header{
 #menu{
   text-align: center;
   background-color: #f3f3f6;
-  /* background: linear-gradient(to left bottom, rgb(196, 188, 252), rgb(121, 101, 253)); */
   padding: 0;
   display: flex;
   align-items: center;
