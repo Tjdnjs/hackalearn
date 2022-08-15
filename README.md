@@ -13,18 +13,17 @@
 
 ---
 
-**박서원(PM - Fullstack)**
+**박서원 (PM - Fullstack)**
 
-- Flask
+- python flask
 - html
 - css
-- js
 
 login/logout<br>게시글 CR<br>댓글 CR<br>DB
 
 ---
 
-**Dev - Frontend<br>이채원**
+**이채원 (Dev - Frontend)**
 
 - html
 - css
@@ -33,7 +32,7 @@ index.html<br>write.html<br>detail.html
 
 ---
 
-**Dev - Frontend<br>조윤주**
+**조윤주(Dev - Frontend)**
 
 - html
 - css
@@ -63,12 +62,17 @@ answer.html<br>login.html<br>question.html
 
 ### Frontend
 
-index.html
+MoCL의 메인 페이지로, 서비스에 대한 소개와 더불어 핵심 기능인 질문 / 답변 페이지로 연결됩니다
+
+메인 페이지의 디자인에 맞추어 타 페이지를 설계하였으며, [html](https://github.com/Tjdnjs/hackalearn/tree/main/templates) , [css](https://github.com/Tjdnjs/hackalearn/tree/main/static/css) 파일은 각각 해당 링크에서 확인하실 수 있습니다.
 
 ![image](https://user-images.githubusercontent.com/91242806/184681109-9bac6d54-97f6-42d2-8657-959ab8a6a029.png)
 
-
 ### Backend
+
+Python의 flask 라이브러리를 활용하여 개발을 진행하였습니다
+
+[app.py](https://github.com/Tjdnjs/hackalearn/blob/main/app.py) <- 해당 링크에서 코드를 확인하실 수 있습니다.
 
 ## 개발 일정
 
