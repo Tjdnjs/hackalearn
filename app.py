@@ -139,6 +139,7 @@ def detail(post):
         return render_template('detail.html', key = post, id=id, tag=result, title=title, content=content, co=comments(post),username=session.get("id"), login=login)
     elif request.method == 'POST':
         login = userexist() 
+        if login == False: return render_template('errorwrite.html')
         id = session.get("id")
         content = request.form['comment']
         print(content)
