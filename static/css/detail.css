@@ -22,6 +22,7 @@
   border: 0;
   font-size: .9rem;
   border-radius: 12.5px;
+  line-height: 1.7em;
   outline: none;
   /* background-color: rgba(243, 243, 243, 0.854) ;
   padding: 2rem 1rem; */
@@ -37,19 +38,18 @@
   margin-bottom: 0.2rem;
   color: gray;
 }
-.answer{
-  /* background-color:rgb(247, 247, 247); */
+/* .answer{
   border-bottom: 2px solid  rgb(224, 224, 230);
-  /* border-radius: 12.5px; */
   margin-bottom: 1rem;
-}
+} */
 .answerd{
   display: block;
   margin-bottom: 0.2rem;
-  height: 1.2rem;
   padding: .2rem .5rem;
   font-size: .8rem;
-  width: 65%;
+  line-height: 1.7em;
+  border-bottom: 2px solid  rgb(224, 224, 230);
+  margin-bottom: 1rem;
 }
 #comment{
   display: block;
