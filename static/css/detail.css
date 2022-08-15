@@ -113,3 +113,17 @@ form{
   justify-content: center;
   padding: 1rem;
 }
+::-webkit-scrollbar{
+  width: 12px; /*스크롤바 너비*/
+}
+::-webkit-scrollbar-thumb{
+  height: 30%; /* 스크롤바 길이*/
+  background-color: rgb(199, 190, 255); /* 스크롤바의 색상*/
+  background-clip: padding-box;
+  border: 2px solid transparent;
+
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track{
+  background: rgba(243, 243, 243, 0.906); /*스크롤바 뒷 배경 색상*/
+}
