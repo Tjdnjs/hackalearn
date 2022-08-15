@@ -31,3 +31,12 @@
 |:---|:---|
 |Front|index.html 수정<br>write.html, answer.html 메뉴바 제작|
 |Back|게시글 CR 구현<br>로그인 된 사용자만 글 작성 가능하도록 수정<br>앱 및 데이터베이스 배포|
+
+## 3️⃣ 8/10 ~ 8/16
+
+### 개발 진행 상황
+
+|Stack|Status|
+|:---|:---|
+|Front|index.html 디자인 수정<br>answer.html 게시판 추가, sidemenu 디자인 수정<br>detail.html css 제작<br>write.html 게시판 정보 추가 및 css 변경<br>|
+|Back|댓글 CR 구현<br>카테고리 |
