@@ -107,7 +107,6 @@ input[id*="dep"]+label em {
     margin-top: -.5rem;
     display: inline-block;
     transition: .3s;
-    background: url('../image/angle-right-solid.svg') 0 0 no-repeat;
 }
 
 input[id*="dep"]+label+ul {
@@ -123,5 +122,4 @@ input[id*="dep"]:checked+label+ul {
 input[id*="dep"]:checked+label em {
 
     transition: .3s;
-    background: url('../image/angle-down-solid.svg') 0 0 no-repeat;
 }
