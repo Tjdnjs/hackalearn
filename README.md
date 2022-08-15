@@ -2,6 +2,8 @@
 
 ### MARACOM
 
+---
+
 **PM - Fullstack<br>박서원**
 
 login/logout<br>게시글 CR<br>댓글 CR<br>DB
@@ -17,6 +19,8 @@ index.html<br>write.html<br>detail.html
 **Dev - Frontend<br>조윤주**
 
 answer.html<br>login.html<br>question.html
+
+---
 
 ## Project - Mento of College Life (MoCL)
 
