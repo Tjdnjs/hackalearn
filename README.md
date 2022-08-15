@@ -39,4 +39,4 @@
 |Stack|Status|
 |:---|:---|
 |Front|index.html 디자인 수정<br>answer.html 게시판 추가, sidemenu 디자인 수정<br>detail.html css 제작<br>write.html 게시판 정보 추가 및 css 변경<br>|
-|Back|댓글 CR 구현<br>카테고리 |
+|Back|댓글 CR 구현<br>카테고리 자동화|
