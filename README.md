@@ -16,7 +16,7 @@
 **박서원 (PM - Fullstack)**
 
 - python flask
-- 
+- mysql
 - html
 - css
 
