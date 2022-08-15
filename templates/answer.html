@@ -117,7 +117,7 @@
         <tbody class="tbody">
           {% for post in article %}
           <tr>
-              <td class="no">{{post[0]}}</td>
+              <td class="no">{{post[0]//10}}</td>
               <td class="title"><a href="/detail/{{post[0]}}">{{post[2]}}</a></td>
               <td class="writer">{{post[1]}}</td>
           </tr>
