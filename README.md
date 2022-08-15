@@ -3,8 +3,7 @@
 - [도입](#Introduce)
   - [팀 소개](#MARACOM)
   - [프로젝트 소개](#Mento-of-College-Life-(MoCL))
-- [설계](#설계-rocket)
-  - [Design](#Design)
+- [설계](#설계)
   - [Frontend](#Frontend)
   - [Backend](#Backend)
 - [기술 스택](#Tech)
@@ -52,9 +51,12 @@ answer.html<br>login.html<br>question.html
 
 ### 설계
 
-#### Design
-
 #### Frontend
+
+index.html
+
+![image](https://user-images.githubusercontent.com/91242806/184681109-9bac6d54-97f6-42d2-8657-959ab8a6a029.png)
+
 
 #### Backend
 
