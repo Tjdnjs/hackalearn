@@ -34,15 +34,16 @@ ul #un{
     border-bottom: 0;
 }
 
-.menubar label+ul a:hover {
-    color: white;
-    background-color: rgb(154, 139, 255);
-    text-decoration: none;
-}
 
 .menubar label+ul a:visited {
     text-decoration: none;
     color: rgb(91, 91, 91);
+}
+
+.menubar label+ul a:hover {
+    color: white;
+    background-color: rgb(154, 139, 255);
+    text-decoration: none;
 }
 
 ul.cur,
@@ -86,6 +87,7 @@ input[id*="dep"]+label a:visited {
 
 input[id*="dep"]+label a:hover {
     text-decoration: none;
+    color: white;
 }
 
 #reg09+label {
@@ -107,7 +109,6 @@ input[id*="dep"]+label em {
     margin-top: -.5rem;
     display: inline-block;
     transition: .3s;
-    background: url('../image/angle-right-solid.svg') 0 0 no-repeat;
 }
 
 input[id*="dep"]+label+ul {
@@ -123,5 +124,4 @@ input[id*="dep"]:checked+label+ul {
 input[id*="dep"]:checked+label em {
 
     transition: .3s;
-    background: url('../image/angle-down-solid.svg') 0 0 no-repeat;
 }

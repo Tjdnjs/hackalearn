@@ -2,27 +2,33 @@
   width: 90%;
   height: 1.8rem;
   font-size: 1rem;
-  border: 0;
+  border: 2px solid rgb(224, 224, 230);
   border-radius: 12.5px;
-  outline: none;
-  padding-left: 2rem;
-  background-color: rgba(243, 243, 243, 0.68);
+  padding: 0 1rem;
+  background-color: white;
   display: block;
   margin: auto;
   margin-bottom: 0.5rem;
 }
-#contentd input[type=text]{
+#contentd textarea{
   width: 90%;
   height: 20rem;
-  font-size: 1rem;
-  border: 0;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: .9rem;
+  border: 2px solid rgb(224, 224, 230);
+  text-align: left;
   border-radius: 15px;
-  outline: none;
-  padding-left: 2rem;
-  background-color: rgba(243, 243, 243, 0.906);
+  padding: 1rem;
+  background-color: white;
   display: block;
   margin: auto;
   margin-bottom: 0.5rem;
+}
+textarea:focus{
+  outline: 2px solid rgb(130, 111, 255)
+}
+input:focus{
+  outline: 2px solid rgb(130, 111, 255)
 }
 #postd input[type=submit]{
   color: white;
@@ -42,8 +48,14 @@
 }
 #writed{
   display: block;
-  margin: 6rem 15% 1rem 15%;
-  padding: 1rem 0.7rem 0.5rem 0.5rem;
+  padding: 1rem 0.2rem 2rem .2rem;
+  /*border: 2px solid rgb(224, 224, 230);*/
+  margin: .5rem 15% 0 15%;
   border-radius: 20px;
-  background-color: rgb(224, 224, 230);
+  background-color: transparent;
+}
+section{
+  font-size: .8rem;
+  margin-top: 5rem;
+  text-align: center;
 }
