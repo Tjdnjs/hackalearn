@@ -40,6 +40,11 @@ td {
 .title{
     width:70%;
 }
+
+.title a{
+    text-decoration: none;
+}
+
 .writer{
     width:15%;
     text-align: right;
