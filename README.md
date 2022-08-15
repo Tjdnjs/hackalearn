@@ -1,10 +1,6 @@
 # 💥hackalearn - maracom💥
 
-## 프로젝트 정보
-
-### 기획
-
-### 역할분담
+### MARACOM
 
 **PM - Fullstack<br>박서원**
 
@@ -21,6 +17,10 @@ index.html<br>write.html<br>detail.html
 **Dev - Frontend<br>조윤주**
 
 answer.html<br>login.html<br>question.html
+
+## Project - Mento of College Life (MoCL)
+
+
 
 ## 1️⃣ 7/28 ~ 8/2
 
