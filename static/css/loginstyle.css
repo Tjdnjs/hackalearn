@@ -1,5 +1,4 @@
 html, body{
-    height : 100%;
     margin : 0;
     font-size : 20px;
 }
@@ -12,7 +11,7 @@ body{
     display : flex;
     flex-direction : column;
     border-radius : 1rem;
-    margin-top: 6rem;
+    margin-top: 10rem;
     width : 100%;
     justify-content : center;
 }
