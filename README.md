@@ -1,5 +1,17 @@
 # 💥hackalearn - maracom💥
 
+## 프로젝트 정보
+
+### 기획
+
+### 역할분담
+
+|Developer|Role|
+|:---|:---|
+|PM - Fullstack<br>박서원|login/logout<br>게시글 CR<br>댓글 CR<br>DB|
+|Dev - Frontend<br>이채원|index.html<br>write.html<br>detail.html|
+|Dev - Frontend<br>조윤주|answer.html<br>login.html<br>question.html|
+
 ## 1️⃣ 7/28 ~ 8/2
 
 ### 강의
