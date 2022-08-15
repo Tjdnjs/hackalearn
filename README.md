@@ -2,7 +2,7 @@
 
 - [도입](#Introduce)
   - [팀 소개](#MARACOM)
-  - [프로젝트 소개](#Mento-of-College-Life-(MoCL))
+  - [프로젝트 소개](#user-content-mento-of-college-life-mocl)
 - [설계](#설계)
   - [Frontend](#Frontend)
   - [Backend](#Backend)
