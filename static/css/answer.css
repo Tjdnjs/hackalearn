@@ -34,11 +34,16 @@ td {
 }
 
 .title a,
-.title a:hover,
 .title a:visited {
     text-decoration: none;
     color: black;
 }
+
+.title a:hover{
+    text-decoration: none;
+    color: gray;
+}
+
 
 .writer{
     width:15%;
