@@ -33,9 +33,9 @@
     {%endif%}
   </header>
   <section>
+    <div>{{tag_}} 게시판에 글 작성 중입니다</div>
     <form action="/post/{{tag_}}" method="get">
       <div id="writed">
-        <!-- <div id="tagd"><input type="text" placeholder="tag" name="tag" /></div> -->
         <div id="titled"><input type="text" placeholder="title" name="title" /></div>
         <div id="contentd">
           <textarea name="content">질문 내용을 작성해주세요 (*이 문구는 질문 작성 시 삭제해주세요)</textarea>
