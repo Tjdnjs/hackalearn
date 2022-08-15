@@ -5,7 +5,9 @@
 
 ul #un{
     display: block;
-    padding: 0.1rem 0.75rem;
+    border-radius: 1rem;
+    padding: 0;
+    margin: .1rem 0.3rem .5rem .3rem;
 }
 
 .menubar {
@@ -23,21 +25,18 @@ ul #un{
 
 .menubar label+ul a {
     text-decoration: none;
-    font-size: .7rem;
+    font-size: .75rem;
     display: block;
     color: rgb(91, 91, 91);
     transition: .2s;
     padding: .5rem .75rem;
-    background-color:#e8e8f0;
+    background-color:rgb(229, 225, 255);
     border-bottom: 0;
 }
 
 .menubar label+ul a:hover {
-    background-color: #b5b5bdc6;
-}
-
-.menubar label+ul a:hover {
-    color: rgb(0, 0, 0);
+    color: white;
+    background-color: rgb(154, 139, 255);
     text-decoration: none;
 }
 
@@ -59,28 +58,33 @@ input[id*="dep"]+label {
     display: block;
     padding: .5rem .75rem;
     padding-right: 0;
-    margin: 0 .75rem;
-    border: 1.5px solid rgb(180, 182, 189);
-    border-bottom: 0;
-    color: rgb(70, 70, 70);
+    margin: 0 .3rem;
+    border: 1.6px solid rgb(130, 111, 255);
+    background-color: transparent;
+    color: rgb(46, 34, 126);
     font-size: .8rem;
-    background-color: rgb(215, 210, 255);
+    font-weight: bold;
     cursor: pointer;
     position: relative;
+    border-radius: 1rem;
+}
+input[id*="dep"]+label:hover{
+    color: white;
+    border: 1.4px solid rgb(130, 111, 255);
+    background-color: rgb(130, 111, 255);
 }
 
 input[id*="dep"]+label a {
-    color: rgb(70, 70, 70);
+    color: rgb(78, 56, 219);
     text-decoration: none;
 }
 
 input[id*="dep"]+label a:visited {
-    color: rgb(70, 70, 70);
+    color: rgb(78, 56, 219);
     text-decoration: none;
 }
 
 input[id*="dep"]+label a:hover {
-    color: rgb(70, 70, 70);
     text-decoration: none;
 }
 

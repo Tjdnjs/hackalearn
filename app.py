@@ -8,6 +8,7 @@ app.secret_key = os.urandom(24)
 users = {
     'guest': 'guest',
     'user': 'user1234',
+    'jyj': 'jyj',
     'admin': '1'
 }
 

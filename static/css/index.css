@@ -1,57 +1,89 @@
-#question, #answer{
-  width: 70%;
-}
-
-.qnad{
-  display: inline-block;
-  height: 100%;
+.qnad, .image{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
 }
 .qnad h1{
   margin-top:0;
+  font-size: 1.2rem;
 }
-
+#qna .image{
+  flex-basis: 60%;
+}
+#qna .qnad{
+  flex-basis: 40%;
+  border-left: 1px solid #E0E0E6;
+}
 #question, #answer{
-  height: 80%;
+  width: 15rem;
   display: inline-block;
   text-align: center;
-  padding: 2rem;
-  margin: 1.5rem;
-  border: 1rem solid #E0E0E6;
+  padding: 1rem;
+  font-size: .9rem;
+  margin: 0 4rem;
+  margin-right:20%;
+  line-height: 2.5em;
+  border: 3px solid rgb(224, 224, 230);
+  /* border: .5rem solid #E0E0E6; */
   border-radius: 80px;
-  background-color: #F1F1F2;
+  /* background-color: #F1F1F2; */
+}
+
+#question{
+  margin-bottom: 1.5rem;
+}
+#qna p{
+  margin: 1rem 0;
 }
 
 #qna{
-  margin-top: 7rem;
+  margin-top: 6rem;
   color: black;
-  display: block;
+  display: flex;
   text-align: center;
-  height: 60%;
+  width: 100%;
+  font-weight: bold;
+  justify-content: center;
+  align-items: flex-start;
 }
-
+#qna img{
+  width: 24rem;
+  display: inline-block;
+}
 #qna button{
   display: inline-block;
   position: relative;
-  /* bottom: -7rem; right: -6rem; */
-  padding: .5rem 1.5rem;
-  background-color: rgb(130, 111, 255);
-  border: none;
+  padding: .3rem 1.5rem;
+  /* background-color: rgb(130, 111, 255); */
+  border: 1.4px solid rgb(130, 111, 255);
+  background-color: transparent;
   border-radius: .8rem;
-  font-size: .8rem;
-  color: white;
+  font-size: .7rem;
+  font-weight: bold;
+  color: rgb(130, 111, 255);
 }
 #qna button:hover{
-  background-color: rgb(82,55,255);
+  color: white;
+  border: 1.4px solid rgb(130, 111, 255);
+  background-color: rgb(130, 111, 255);
 }
 #explain{
-  font-size: 1.25rem;
-  margin-top: 4rem;
+  margin-top: 1rem;
   text-align: center;
   color: rgb(69, 69, 69);
 }
-/* .qnad{
-  display: inline-block;
-  border-radius: 100px;
-  margin: 0.5rem;
-  background-color: #E0E0E6;
-} */
+#explain p{
+  font-size: .9rem;
+}
+#explain h1{
+  color: black;
+}
+#explain h1 b{
+  color: rgb(82,55,255)
+}
+#explain p i{
+  font-weight: bolder;
+  font-size:1rem;
+  color: rgb(82,55,255)
+}
