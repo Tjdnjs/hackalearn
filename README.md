@@ -16,10 +16,11 @@
 **박서원 (PM - Fullstack)**
 
 - python flask
+- 
 - html
 - css
 
-login/logout<br>게시글 CR<br>댓글 CR<br>DB
+login/logout<br>게시글 CR<br>댓글 CR<br>DataBase<br>배포
 
 ---
 
@@ -42,6 +43,8 @@ answer.html<br>login.html<br>question.html
 ---
 
 ## Mento of College Life (MoCL)
+
+### [Go To MoCL Page](https://mento-maracom.herokuapp.com)
 
 - [주제 선정 배경](#주제 선정 배경)
 - [기능](#기능)
@@ -70,7 +73,7 @@ MoCL의 메인 페이지로, 서비스에 대한 소개와 더불어 핵심 기�
 
 ### Backend
 
-Python의 flask 라이브러리를 활용하여 개발을 진행하였습니다
+Python의 flask 라이브러리와 mysql 데이터베이스를 활용하여 개발을 진행하였습니다
 
 [app.py](https://github.com/Tjdnjs/hackalearn/blob/main/app.py) <- 해당 링크에서 코드를 확인하실 수 있습니다.
 
