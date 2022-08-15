@@ -6,19 +6,20 @@
 }
 
 .table {
-    font-size: .7rem;
+    font-size: .8rem;
     border-collapse: collapse;
     width: 100%;
     margin-top: 1rem;
     text-align: left;
 }
 
-.tablehead {
-    background-color: rgb(215,210,255);
-    border-radius: 20px;
+tr.thread{
+    font-weight: bold;
 }
-
-
+/* .tablehead {
+    background-color: rgb(215,210,255);
+    font-weight: bold;
+} */
 
 td {
     height: 2rem;
