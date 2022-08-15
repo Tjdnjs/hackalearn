@@ -115,13 +115,13 @@
           </tr>
         </thead>
         <tbody class="tbody">
+          {% for post in article %}
           <tr>
-        {% for post in article %}
-          <td class="no">{{post[0]}}</td>
-          <td class="title"><a href="/detail/{{post[0]}}">{{post[2]}}</a></td>
-          <td class="writer">{{post[1]}}</td>
-        {% endfor %}
+              <td class="no">{{post[0]}}</td>
+              <td class="title"><a href="/detail/{{post[0]}}">{{post[2]}}</a></td>
+              <td class="writer">{{post[1]}}</td>
           </tr>
+          {% endfor %}
         </tbody>
       </table>
     </div>
