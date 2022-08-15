@@ -8,13 +8,17 @@ section{
     align-items: center;
 }
 
+h2{
+    margin-bottom: 2rem;
+}
+
 button{
-    width : 80%;
-    height: 30px;
+    width : 78%;
+    height: 1.7rem;
     margin-bottom:.6rem;
     background-color:rgb(130, 111, 255);
     border:none;
-    border-radius:5px;
+    border-radius:.5rem;
 }
 button:hover{
     background-color:rgb(82, 55, 255);
@@ -26,7 +30,7 @@ button a{
     text-decoration:none;
     color:white;
     font-size: .75rem;
-    padding: .4rem 25%;
+    padding: .7rem 25%;
 }
 
 #table{
@@ -41,3 +45,6 @@ button a{
     align-items: center;
 }
 
+.column button:last-child{
+    margin-bottom:1.5rem
+}
