@@ -34,15 +34,16 @@ ul #un{
     border-bottom: 0;
 }
 
-.menubar label+ul a:hover {
-    color: white;
-    background-color: rgb(154, 139, 255);
-    text-decoration: none;
-}
 
 .menubar label+ul a:visited {
     text-decoration: none;
     color: rgb(91, 91, 91);
+}
+
+.menubar label+ul a:hover {
+    color: white;
+    background-color: rgb(154, 139, 255);
+    text-decoration: none;
 }
 
 ul.cur,
@@ -86,6 +87,7 @@ input[id*="dep"]+label a:visited {
 
 input[id*="dep"]+label a:hover {
     text-decoration: none;
+    color: white;
 }
 
 #reg09+label {
