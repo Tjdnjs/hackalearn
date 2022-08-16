@@ -49,7 +49,6 @@ input:focus{
 #writed{
   display: block;
   padding: 1rem 0.2rem 2rem .2rem;
-  /*border: 2px solid rgb(224, 224, 230);*/
   margin: .5rem 15% 0 15%;
   border-radius: 20px;
   background-color: transparent;
