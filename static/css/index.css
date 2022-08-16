@@ -25,9 +25,7 @@
   margin-right:20%;
   line-height: 2.5em;
   border: 3px solid rgb(224, 224, 230);
-  /* border: .5rem solid #E0E0E6; */
   border-radius: 80px;
-  /* background-color: #F1F1F2; */
 }
 
 #question{
@@ -55,7 +53,6 @@
   display: inline-block;
   position: relative;
   padding: .3rem 1.5rem;
-  /* background-color: rgb(130, 111, 255); */
   border: 1.4px solid rgb(130, 111, 255);
   background-color: transparent;
   border-radius: .8rem;
