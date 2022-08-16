@@ -1,47 +1,61 @@
 # 💥hackalearn - maracom💥
 
+### [Go To MoCL Page](https://mento-maracom.herokuapp.com)
+
 - [도입](#Introduce)
   - [팀 소개](#MARACOM)
-  - [프로젝트 소개](#Mento-of-College-Life-(MoCL))
+  - [프로젝트 소개](#user-content-mento-of-college-life-mocl)
 - [설계](#설계)
   - [Frontend](#Frontend)
   - [Backend](#Backend)
-- [기술 스택](#Tech)
 
 ## Introduce
 
-### MARACOM
+## MARACOM
 
 ---
 
-**PM - Fullstack<br>박서원**
+**박서원 (PM - Fullstack)**
 
-login/logout<br>게시글 CR<br>댓글 CR<br>DB
+- python flask
+- mysql
+- html
+- css
+
+login/logout<br>게시글 CR<br>댓글 CR<br>DataBase<br>배포
 
 ---
 
-**Dev - Frontend<br>이채원**
+**이채원 (Dev - Frontend)**
+
+- html
+- css
 
 index.html<br>write.html<br>detail.html
 
 ---
 
-**Dev - Frontend<br>조윤주**
+**조윤주(Dev - Frontend)**
+
+- html
+- css
 
 answer.html<br>login.html<br>question.html
 
 ---
 
-### Mento of College Life (MoCL)
+## Mento of College Life (MoCL)
+
+### [Go To MoCL Page](https://mento-maracom.herokuapp.com)
 
 - [주제 선정 배경](#주제 선정 배경)
 - [기능](#기능)
 
-#### 주제 선정 배경
+### 주제 선정 배경
 
 대학 생활 중 좋은 프로그램이 많지만, 그 프로그램을 참여하기 위해 어떠한 준비과정을 거쳐야하는 지에 대한 정보는 얻기 힘들다. 하여, 해당 경험이 있는 멘토를 통해 원하는 정보를 얻을 수 있는 사이트 제작을 기획하게 되었다.
 
-#### 기능
+### 기능
 
 1. 로그인 / 로그아웃
 2. 게시글 작성 / 열람 
@@ -49,16 +63,21 @@ answer.html<br>login.html<br>question.html
 4. 게시글 카테고리 분류 자동화
 5. 게시글 / 댓글 작성 권한을 로그인 된 사용자에게만 부여
 
-### 설계
+## 설계
 
-#### Frontend
+### Frontend
 
-index.html
+MoCL의 메인 페이지로, 서비스에 대한 소개와 더불어 핵심 기능인 질문 / 답변 페이지로 연결됩니다
+
+메인 페이지의 디자인에 맞추어 타 페이지를 설계하였으며, [html](https://github.com/Tjdnjs/hackalearn/tree/main/templates) , [css](https://github.com/Tjdnjs/hackalearn/tree/main/static/css) 파일은 각각 해당 링크에서 확인하실 수 있습니다.
 
 ![image](https://user-images.githubusercontent.com/91242806/184681109-9bac6d54-97f6-42d2-8657-959ab8a6a029.png)
 
+### Backend
 
-#### Backend
+Python의 flask 라이브러리와 mysql 데이터베이스를 활용하여 개발을 진행하였습니다
+
+[app.py](https://github.com/Tjdnjs/hackalearn/blob/main/app.py) <- 해당 링크에서 코드를 확인하실 수 있습니다.
 
 ## 개발 일정
 

@@ -13,7 +13,7 @@
 }
 #qna .qnad{
   flex-basis: 40%;
-  border-left: 1px solid #E0E0E6;
+  border-left: 1px solid #d7d7df;
 }
 #question, #answer{
   width: 15rem;
