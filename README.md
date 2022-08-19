@@ -69,7 +69,7 @@ answer.html<br>login.html<br>question.html
 
 MoCL의 메인 페이지로, 서비스에 대한 소개와 더불어 핵심 기능인 질문 / 답변 페이지로 연결됩니다
 
-메인 페이지의 디자인에 맞추어 타 페이지를 설계하였으며, [html](https://github.com/Tjdnjs/hackalearn/tree/main/templates) , [css](https://github.com/Tjdnjs/hackalearn/tree/main/static/css) 파일은 각각 해당 링크에서 확인하실 수 있습니다.
+메인 페이지의 디자인에 맞추어 서브 페이지들을 설계하였으며, [html](https://github.com/Tjdnjs/hackalearn/tree/main/templates) , [css](https://github.com/Tjdnjs/hackalearn/tree/main/static/css) 파일은 각각 해당 링크에서 확인하실 수 있습니다.
 
 ![image](https://user-images.githubusercontent.com/91242806/184681109-9bac6d54-97f6-42d2-8657-959ab8a6a029.png)
 
