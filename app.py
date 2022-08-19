@@ -111,7 +111,7 @@ def write(tag_):
 @app.route('/post/<string:tag_>', methods = ["get", "post"])
 def post(tag_):
     login = userexist() 
-    if login == False: return render_template('errorwrite.html')
+    if login == False: return '<script>alert("not found user");history.go(-1);</script>'
     id = session.get("id")
     # tag = str(request.args.get('tag'))
     title = str(request.args.get('title'))
@@ -139,7 +139,7 @@ def detail(post):
         return render_template('detail.html', key = post, id=id, tag=result, title=title, content=content, co=comments(post),username=session.get("id"), login=login)
     elif request.method == 'POST':
         login = userexist() 
-        if login == False: return render_template('errorwrite.html')
+        if login == False: return '<script>alert("not found user");history.go(-1);</script>'
         id = session.get("id")
         content = request.form['comment']
         print(content)
