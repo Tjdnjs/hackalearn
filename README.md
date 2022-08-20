@@ -5,9 +5,11 @@
 - [도입](#Introduce)
   - [팀 소개](#MARACOM)
   - [프로젝트 소개](#user-content-mento-of-college-life-mocl)
+  - [협업 방식](#user-content-협업-)
 - [설계](#설계)
   - [Frontend](#Frontend)
   - [Backend](#Backend)
+- [개발 일정](#user-content-개발-일정)
 
 ## Introduce
 
@@ -62,6 +64,31 @@ answer.html<br>login.html<br>question.html
 3. 댓글 작성 / 열람
 4. 게시글 카테고리 분류 자동화
 5. 게시글 / 댓글 작성 권한을 로그인 된 사용자에게만 부여
+
+## 협업 방식
+
+### GitHub 코드공유
+
+Pull Request 를 통한 코드 공유를 통해 서로의 개발 현황을 확인
+
+![image](https://user-images.githubusercontent.com/91242806/185753324-7be297d9-477a-4d01-96d7-981540e11c91.png)
+![image](https://user-images.githubusercontent.com/91242806/185753327-84d9d079-48e3-435e-8fc5-0a32b7422e6b.png)
+
+### Google Meet 회의
+
+전체 회의 7회 : 7/27, 8/1, 8/2, 8/7, 8/9, 8/12, 8/15
+
+각 주에 개발할 내용을 구체적으로 기획하고, 중간점검과 최종점검 진행. 중간점검 / 최종 점검을 할 때에는 화면을 공유하며 채친과 음성으로 읙녀을 주고받고, 피드백에 따른 실시간 수정을 진행함
+
+![image](https://user-images.githubusercontent.com/91242806/185753206-16eb4af0-235c-4a3c-9027-973d3fe7412b.png)
+
+### KakaoTalk 기타
+
+각 주에 정해진 개발 내용을 체크박스 형태로 정리하여 완료될 시 하나씩 체크하며 프론트 / 백의 개발 업무 현황 확인. Fetch 과정에서 충돌이 발생할 시 또는 작은 피드백을 공유할 시 카톡으로 대화를 
+
+![image](https://user-images.githubusercontent.com/91242806/185753390-b864135f-c56c-4a49-b4f0-c8db538bb0cf.png)
+
+
 
 ## 설계
 
