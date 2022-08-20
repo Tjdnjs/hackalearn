@@ -48,7 +48,7 @@ answer.html<br>login.html<br>question.html
 
 ### [Go To MoCL Page](https://mento-maracom.herokuapp.com)
 
-- [주제 선정 배경](#주제 선정 배경)
+- [주제 선정 배경](#user-content-주제-선정-배경)
 - [기능](#기능)
 
 ### 주제 선정 배경
