@@ -5,7 +5,7 @@
 - [도입](#Introduce)
   - [팀 소개](#MARACOM)
   - [프로젝트 소개](#user-content-mento-of-college-life-mocl)
-  - [협업 방식](#user-content-협업-)
+  - [협업 방식](#user-content-협업-방식)
 - [설계](#설계)
   - [Frontend](#Frontend)
   - [Backend](#Backend)
