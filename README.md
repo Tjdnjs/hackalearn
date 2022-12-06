@@ -1,7 +1,5 @@
 # 💥hackalearn - maracom💥
 
-### [Go To MoCL Page](https://mento-maracom.herokuapp.com)
-
 - [도입](#Introduce)
   - [팀 소개](#MARACOM)
   - [협업 방식](#user-content-협업-방식)
