@@ -76,7 +76,6 @@ Fetch 과정에서 충돌이 발생할 시 또는 작은 피드백을 공유할 
 
 ## Mento of College Life (MoCL)
 
-### [Go To MoCL Page](https://mento-maracom.herokuapp.com)
 
 - [주제 선정 배경](#user-content-주제-선정-배경)
 - [기능](#기능)
